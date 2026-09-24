@@ -198,10 +198,10 @@
     position: sticky;
     top: 0;
     z-index: 50;
-    background-color: var(--color-surface-bright);
+    background-color: rgba(255, 255, 255, 0.88);
     border-bottom: 1px solid var(--color-outline-variant);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     transition: all 0.2s ease;
   }
 

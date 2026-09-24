@@ -308,7 +308,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: var(--color-background);
+    background-color: transparent;
   }
 
   .page-container {
