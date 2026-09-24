@@ -161,9 +161,7 @@
 <style>
   .dash-sidebar {
     width: 250px;
-    background-color: rgba(255, 255, 255, 0.78);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
+    background-color: var(--color-surface-container-low);
     border-right: 1px solid var(--color-outline-variant);
     display: flex;
     flex-direction: column;

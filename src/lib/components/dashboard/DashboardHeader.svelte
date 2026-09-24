@@ -91,10 +91,8 @@
 
 <style>
   .dash-header {
-    background-color: rgba(255, 255, 255, 0.88);
+    background-color: var(--color-surface-container-lowest);
     border-bottom: 1px solid var(--color-outline-variant);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
     position: sticky;
     top: 0;
     z-index: 50;
