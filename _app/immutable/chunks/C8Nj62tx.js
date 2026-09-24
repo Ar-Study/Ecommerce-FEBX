@@ -1,1 +1,0 @@
-import"./BfXCCG2G.js";
