@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Checkout - FEB-X Marketplace</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed": "#e0e0ff",
+                    "tertiary-fixed-dim": "#bac3ff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "secondary-fixed": "#ffdf9e",
+                    "surface": "#f9f9f9",
+                    "on-secondary-fixed": "#261a00",
+                    "on-tertiary-fixed-variant": "#293ca0",
+                    "on-background": "#1a1c1c",
+                    "secondary-fixed-dim": "#fabd00",
+                    "surface-variant": "#e2e2e2",
+                    "on-surface-variant": "#454652",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#00105c",
+                    "primary": "#000666",
+                    "tertiary": "#000f5b",
+                    "on-surface": "#1a1c1c",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "surface-container": "#eeeeee",
+                    "surface-bright": "#f9f9f9",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2f3131",
+                    "on-tertiary": "#ffffff",
+                    "outline-variant": "#c6c5d4",
+                    "tertiary-container": "#072189",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "primary-container": "#1a237e",
+                    "tertiary-fixed": "#dee0ff",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-dim": "#dadada",
+                    "primary-fixed-dim": "#bdc2ff",
+                    "secondary": "#785900",
+                    "surface-tint": "#4c56af",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#bdc2ff",
+                    "on-tertiary-container": "#7e90f8",
+                    "outline": "#767683",
+                    "on-primary-container": "#8690ee",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed": "#000767",
+                    "surface-container-low": "#f3f3f3",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e8e8e8",
+                    "secondary-container": "#fdc003",
+                    "background": "#f9f9f9",
+                    "on-primary-fixed-variant": "#343d96",
+                    "on-secondary-container": "#6c5000"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "margin-mobile": "16px",
+                    "stack-sm": "8px",
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "headline-lg": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "label-md": ["JetBrains Mono"],
+                    "button": ["Inter"],
+                    "headline-lg-mobile": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "label-md": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "button": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .ambient-shadow { box-shadow: 0 4px 16px rgba(0, 6, 102, 0.04); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface border-b border-outline-variant fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-unit max-w-container-max mx-auto h-[72px]">
+<div class="flex items-center gap-gutter">
+<span class="font-headline-md text-headline-md font-bold text-primary">FEB-X Marketplace</span>
+<nav class="hidden md:flex gap-stack-lg items-center ml-stack-lg h-full">
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 px-2 py-1 rounded" href="#">Browse</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 px-2 py-1 rounded" href="#">Ventures</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 px-2 py-1 rounded" href="#">Funding</a>
+<a class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 px-2 py-1 rounded" href="#">Portfolio</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">search</span>
+</button>
+<div class="flex items-center gap-2">
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 p-2 rounded-full flex items-center justify-center">
+<span class="material-symbols-outlined text-2xl">help_outline</span>
+</button>
+</div>
+<button class="text-primary border-b-2 border-secondary pb-1 hover:bg-surface-container-high transition-colors cursor-pointer active:opacity-80 font-button text-button flex items-center gap-2 ml-4">
+<span class="material-symbols-outlined text-xl">shopping_cart</span>
+                Cart
+            </button>
+<img alt="User profile avatar" class="w-10 h-10 rounded-full border border-outline-variant object-cover ml-4" data-alt="A professional headshot of a student in a modern university setting, well-lit, shallow depth of field, high-quality, representing a user profile avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzBZok0nQZNLqN1V5QjYTV9qW_Yrgd6vlxJBSDDS9uOSBxwwUd0KFdINklP4pCCFrLbEnLXD8kkG7lMHLavfqaAFJxBLYW2nRdUhTBeLm9Tx3QsbI2aS5RxyTUyKMxSC6i-d02l1slOzroTYfA65LgT3w2_qTuS0c8MqCu5si6QgT1fF2CvludIyg_Wd1djSJVnPGaqNWijwQPWUSkjyFMsG5EHei7Wzw09syGy4scj9Nb7Vo_TXhg3A"/>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-[104px] pb-12 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Page Header & Stepper -->
+<div class="mb-stack-lg">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary mb-stack-md">Checkout</h1>
+<div class="flex items-center text-sm font-label-md text-label-md w-full max-w-3xl">
+<div class="flex items-center text-on-surface-variant">
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center mr-2">1</span>
+                    Cart
+                </div>
+<div class="flex-grow h-px bg-outline-variant mx-4"></div>
+<div class="flex items-center text-primary font-bold">
+<span class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mr-2">2</span>
+                    Checkout
+                </div>
+<div class="flex-grow h-px bg-outline-variant mx-4"></div>
+<div class="flex items-center text-on-surface-variant opacity-50">
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center mr-2">3</span>
+                    Payment
+                </div>
+<div class="flex-grow h-px bg-outline-variant mx-4"></div>
+<div class="flex items-center text-on-surface-variant opacity-50">
+<span class="w-6 h-6 rounded-full bg-surface-container-high flex items-center justify-center mr-2">4</span>
+                    Success
+                </div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-start">
+<!-- Left Column: Shipping & Payment (8 columns) -->
+<div class="lg:col-span-8 flex flex-col gap-stack-lg">
+<!-- Shipping Address Section -->
+<section class="bg-surface-container-lowest border border-surface-variant rounded-lg p-stack-lg ambient-shadow">
+<div class="flex justify-between items-center mb-stack-md pb-stack-sm border-b border-surface-variant">
+<h2 class="font-headline-md text-headline-md text-primary flex items-center gap-2">
+<span class="material-symbols-outlined">location_on</span> Alamat Pengiriman
+                        </h2>
+<button class="text-tertiary-container hover:text-primary font-button text-button transition-colors">
+                            Ubah Alamat
+                        </button>
+</div>
+<div class="flex flex-col gap-unit">
+<p class="font-body-md text-body-md font-bold">Budi Santoso <span class="font-normal text-on-surface-variant ml-2 text-sm">(Utama)</span></p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">0812-3456-7890</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Gedung Fakultas Ekonomi dan Bisnis, Lantai 3 Ruang 301</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Universitas Indonesia, Depok, Jawa Barat 16424</p>
+</div>
+</section>
+<!-- Shipping Method Section -->
+<section class="bg-surface-container-lowest border border-surface-variant rounded-lg p-stack-lg ambient-shadow">
+<h2 class="font-headline-md text-headline-md text-primary flex items-center gap-2 mb-stack-md pb-stack-sm border-b border-surface-variant">
+<span class="material-symbols-outlined">local_shipping</span> Metode Pengiriman
+                    </h2>
+<div class="space-y-stack-sm">
+<label class="flex items-start p-stack-sm border border-outline-variant rounded-lg hover:border-primary-container cursor-pointer transition-colors bg-surface">
+<input checked="" class="mt-1 text-primary-container focus:ring-secondary mr-stack-md" name="shipping" type="radio"/>
+<div class="flex-grow">
+<p class="font-body-md text-body-md font-semibold">Standard Campus Delivery</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Estimasi 1-2 hari kerja (area kampus)</p>
+</div>
+<span class="font-body-md text-body-md font-bold text-primary">Rp 0</span>
+</label>
+<label class="flex items-start p-stack-sm border border-surface-variant rounded-lg hover:border-primary-container cursor-pointer transition-colors">
+<input class="mt-1 text-primary-container focus:ring-secondary mr-stack-md" name="shipping" type="radio"/>
+<div class="flex-grow">
+<p class="font-body-md text-body-md font-semibold">Express Delivery</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Estimasi hari yang sama (pesan sebelum jam 14:00)</p>
+</div>
+<span class="font-body-md text-body-md font-bold text-primary">Rp 15.000</span>
+</label>
+</div>
+</section>
+<!-- Payment Method Section -->
+<section class="bg-surface-container-lowest border border-surface-variant rounded-lg p-stack-lg ambient-shadow">
+<h2 class="font-headline-md text-headline-md text-primary flex items-center gap-2 mb-stack-md pb-stack-sm border-b border-surface-variant">
+<span class="material-symbols-outlined">payment</span> Metode Pembayaran
+                    </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<!-- Virtual Account -->
+<div class="border border-outline-variant rounded-lg p-stack-md hover:border-primary-container cursor-pointer transition-colors relative bg-surface">
+<div class="absolute top-4 right-4">
+<input checked="" class="text-primary-container focus:ring-secondary" name="payment" type="radio"/>
+</div>
+<span class="material-symbols-outlined text-3xl text-primary-container mb-2">account_balance</span>
+<p class="font-body-md text-body-md font-semibold">Virtual Account (VA)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Transfer instan via Bank Mandiri, BNI, BCA</p>
+</div>
+<!-- QRIS -->
+<div class="border border-surface-variant rounded-lg p-stack-md hover:border-primary-container cursor-pointer transition-colors relative">
+<div class="absolute top-4 right-4">
+<input class="text-primary-container focus:ring-secondary" name="payment" type="radio"/>
+</div>
+<span class="material-symbols-outlined text-3xl text-primary-container mb-2">qr_code_scanner</span>
+<p class="font-body-md text-body-md font-semibold">QRIS</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Scan kode QR via e-wallet atau m-banking</p>
+</div>
+<!-- Bank Transfer Manual -->
+<div class="border border-surface-variant rounded-lg p-stack-md hover:border-primary-container cursor-pointer transition-colors relative">
+<div class="absolute top-4 right-4">
+<input class="text-primary-container focus:ring-secondary" name="payment" type="radio"/>
+</div>
+<span class="material-symbols-outlined text-3xl text-primary-container mb-2">receipt_long</span>
+<p class="font-body-md text-body-md font-semibold">Bank Transfer Manual</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Verifikasi manual 1x24 jam</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Order Summary (4 columns) -->
+<div class="lg:col-span-4 sticky top-[104px]">
+<section class="bg-surface-container-lowest border-t-2 border-t-secondary border border-surface-variant rounded-b-lg p-stack-lg ambient-shadow">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md pb-stack-sm border-b border-surface-variant">
+                        Ringkasan Pesanan
+                    </h2>
+<!-- Item List -->
+<div class="space-y-stack-md mb-stack-lg border-b border-surface-variant pb-stack-lg">
+<div class="flex gap-stack-sm">
+<div class="w-16 h-16 bg-surface-container flex-shrink-0 rounded flex items-center justify-center overflow-hidden border border-outline-variant">
+<img alt="Soil Sensor Pro v2" class="object-cover w-full h-full" data-alt="A clean, well-lit product photo of an electronic soil sensor device, modern tech aesthetic, white background, high resolution." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAe_g1EyFlYLP7KkjhgP-zqabFA9lR45BKZLgS0Oa7TjXMjfj_cbHQ0-EGhat60iGNINz6VaUUgph1EB83P31bS14rJKbJhns1oR-J9W33graVj9GazWkCBvmMHAAZDHHs15m4ZBCEshWNt8DkS_MlxH3mG44FHgSHEclpRUUVSrGhwx0ob0iAliTL069DPA1K9AIlhGC8tuQ_pDmX-8WXniWSBh33yW4Dn7mkPxQsGXdPW5_DIhuGtw"/>
+</div>
+<div class="flex-grow">
+<p class="font-body-sm text-body-sm font-semibold line-clamp-2">Soil Sensor Pro v2 - IoT Precision Agriculture</p>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">AgriGrow Tech</p>
+<div class="flex justify-between items-center mt-2">
+<span class="font-body-sm text-body-sm text-on-surface-variant">1 x Rp 750.000</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Calculations -->
+<div class="space-y-stack-sm font-body-sm text-body-sm mb-stack-lg border-b border-surface-variant pb-stack-lg">
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Subtotal Produk</span>
+<span class="font-semibold">Rp 750.000</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Biaya Pengiriman</span>
+<span class="font-semibold">Rp 0</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Biaya Layanan (Platform)</span>
+<span class="font-semibold">Rp 2.500</span>
+</div>
+<div class="flex justify-between">
+<span class="text-on-surface-variant">Pajak (PPN 11%)</span>
+<span class="font-semibold">Rp 82.500</span>
+</div>
+</div>
+<!-- Total -->
+<div class="flex justify-between items-center mb-stack-lg">
+<span class="font-headline-md text-headline-md font-bold">Total Pembayaran</span>
+<span class="font-headline-md text-headline-md font-bold text-primary">Rp 835.000</span>
+</div>
+<!-- Action -->
+<button class="w-full bg-primary-container text-on-primary-container font-button text-button py-3 px-4 rounded-lg hover:opacity-90 transition-opacity flex justify-center items-center gap-2 focus:outline-none focus:ring-2 focus:ring-secondary focus:ring-offset-2">
+<span class="material-symbols-outlined">lock</span> Buat Pesanan
+                    </button>
+<p class="font-label-md text-label-md text-on-surface-variant text-center mt-stack-sm opacity-70">
+                        Dengan menekan tombol, Anda menyetujui Syarat &amp; Ketentuan FEB-X Marketplace.
+                    </p>
+</section>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-margin-desktop mt-auto flex justify-between items-center bg-surface-container border-t border-outline-variant font-body-sm text-body-sm">
+<div class="text-on-surface">
+            © 2024 FEB-X Academic Fintech Platform. All rights reserved.
+        </div>
+<div class="flex gap-stack-md text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-primary transition-colors" href="#">Marketplace Rules</a>
+<a class="hover:text-primary transition-colors" href="#">Contact Support</a>
+</div>
+</footer>
+</body></html>

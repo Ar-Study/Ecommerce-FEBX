@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Growth Monitoring Dashboard - FEB-X</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#f9f9f9",
+                      "surface-tint": "#4c56af",
+                      "primary": "#000666",
+                      "on-secondary-container": "#6c5000",
+                      "on-error": "#ffffff",
+                      "secondary": "#785900",
+                      "inverse-surface": "#2f3131",
+                      "inverse-primary": "#bdc2ff",
+                      "on-surface": "#1a1c1c",
+                      "error-container": "#ffdad6",
+                      "surface-container": "#eeeeee",
+                      "outline-variant": "#c6c5d4",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-background": "#1a1c1c",
+                      "on-tertiary-fixed": "#00105c",
+                      "on-primary-fixed-variant": "#343d96",
+                      "outline": "#767683",
+                      "surface-variant": "#e2e2e2",
+                      "on-surface-variant": "#454652",
+                      "on-tertiary-container": "#7e90f8",
+                      "surface": "#f9f9f9",
+                      "secondary-fixed": "#ffdf9e",
+                      "on-primary": "#ffffff",
+                      "tertiary-fixed": "#dee0ff",
+                      "error": "#ba1a1a",
+                      "primary-fixed-dim": "#bdc2ff",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#1a237e",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#261a00",
+                      "on-primary-fixed": "#000767",
+                      "background": "#f9f9f9",
+                      "on-secondary-fixed-variant": "#5b4300",
+                      "surface-container-low": "#f3f3f3",
+                      "tertiary": "#000f5b",
+                      "surface-container-high": "#e8e8e8",
+                      "primary-fixed": "#e0e0ff",
+                      "secondary-container": "#fdc003",
+                      "surface-container-highest": "#e2e2e2",
+                      "secondary-fixed-dim": "#fabd00",
+                      "on-tertiary-fixed-variant": "#293ca0",
+                      "on-secondary": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "tertiary-container": "#072189",
+                      "on-primary-container": "#8690ee",
+                      "tertiary-fixed-dim": "#bac3ff",
+                      "on-error-container": "#93000a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "container-max": "1440px",
+                      "unit": "4px",
+                      "margin-desktop": "40px",
+                      "stack-sm": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "JetBrains Mono"
+                      ],
+                      "button": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .ambient-shadow {
+            box-shadow: 0px 4px 16px rgba(0, 6, 102, 0.04);
+        }
+      </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center h-16 px-margin-desktop w-full fixed top-0 z-50 bg-surface-container-lowest dark:bg-surface-container-low border-b border-outline-variant dark:border-outline">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">FEB-X</span>
+<div class="hidden md:flex ml-8 border border-outline-variant rounded-full px-4 py-2 items-center bg-surface-bright focus-within:border-primary transition-colors">
+<span class="material-symbols-outlined text-outline mr-2" data-icon="search">search</span>
+<input class="bg-transparent border-none outline-none text-body-sm text-on-surface w-64 focus:ring-0 placeholder-outline" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 hover:bg-surface-container dark:hover:bg-surface-variant rounded-full">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-colors p-2 hover:bg-surface-container dark:hover:bg-surface-variant rounded-full">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+</div>
+</nav>
+<!-- SideNavBar & Main Content Wrapper -->
+<div class="flex pt-16 h-screen overflow-hidden">
+<!-- SideNavBar -->
+<aside class="hidden md:flex flex-col p-stack-md space-y-stack-sm w-64 h-full fixed left-0 top-16 bg-surface-container dark:bg-surface-container-high border-r border-outline-variant">
+<div class="flex items-center gap-4 mb-stack-lg p-2">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-outline-variant bg-surface-bright flex-shrink-0">
+<img alt="Lecturer Profile Image" class="w-full h-full object-cover" data-alt="A professional headshot of an academic lecturer in a modern office setting. The lighting is bright and clean, emphasizing a corporate yet approachable demeanor. The style aligns with a high-end educational institution's brand identity, utilizing soft white lighting and subtle navy blue accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8Px1WqQwIdf88kqLhbrsbGqja-ZSH4bQaKgm-kAXIrN5KRx-Oq46-aiJnjWMWkPCfLbqYpMRv8hFoaBn4AkxO1qlYZmjEbp_WdkBn1vEuBSQ23nHkvI81FeXmiVxDEJe-6UwqIz96NUrceEdPnZdMeJK-dt9_PmUXKkHTz6jO0iHUijf4mP-60p1phWjGHs7ElLTAlkem6nnIyct8glgvODfRtZeiXdJaEWFPM2rGkx2JSdL7OQ2jaw"/>
+</div>
+<div>
+<h2 class="font-button text-button text-primary">Dr. Academic User</h2>
+<p class="font-label-md text-label-md text-on-surface-variant">Senior Lecturer</p>
+</div>
+</div>
+<nav class="flex flex-col space-y-1">
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface rounded-lg active:scale-95 transition-all duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Ringkasan
+                </a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface rounded-lg active:scale-95 transition-all duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                    Pendapatan
+                </a>
+<a class="flex items-center gap-3 p-3 bg-secondary-container text-on-secondary-container font-bold rounded-lg active:scale-95 transition-all duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+                    Pertumbuhan
+                </a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface rounded-lg active:scale-95 transition-all duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="database">database</span>
+                    Data Bisnis
+                </a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface rounded-lg active:scale-95 transition-all duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+                    Akademik
+                </a>
+<a class="flex items-center gap-3 p-3 text-on-surface-variant hover:bg-surface-variant hover:text-on-surface rounded-lg active:scale-95 transition-all duration-150 font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    Pengaturan
+                </a>
+</nav>
+</aside>
+<!-- Main Content -->
+<main class="flex-1 ml-0 md:ml-64 p-margin-mobile md:p-margin-desktop overflow-y-auto bg-background">
+<div class="max-w-container-max mx-auto space-y-stack-lg">
+<!-- Header & Filters -->
+<header class="flex flex-col md:flex-row justify-between items-start md:items-end gap-stack-md">
+<div>
+<h1 class="font-headline-lg text-headline-lg text-primary mb-2">Growth Monitoring Dashboard</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Pantau metrik pertumbuhan bisnis mahasiswa dan retensi pengguna.</p>
+</div>
+<div class="flex flex-wrap gap-4">
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase">Program Studi</label>
+<select class="bg-surface-bright border border-outline-variant rounded-lg px-4 py-2 font-body-sm text-body-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none ambient-shadow">
+<option>Manajemen Bisnis</option>
+<option>Akuntansi</option>
+<option>Ekonomi Pembangunan</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase">Semester</label>
+<select class="bg-surface-bright border border-outline-variant rounded-lg px-4 py-2 font-body-sm text-body-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none ambient-shadow">
+<option>Ganjil 2023/2024</option>
+<option>Genap 2022/2023</option>
+</select>
+</div>
+<div class="flex flex-col gap-1">
+<label class="font-label-md text-label-md text-on-surface-variant uppercase">Kelas</label>
+<select class="bg-surface-bright border border-outline-variant rounded-lg px-4 py-2 font-body-sm text-body-sm text-on-surface focus:border-primary focus:ring-1 focus:ring-primary transition-colors outline-none ambient-shadow">
+<option>MB-4A</option>
+<option>MB-4B</option>
+<option>Semua Kelas</option>
+</select>
+</div>
+</div>
+</header>
+<!-- KPIs Bento Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- KPI 1 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant ambient-shadow flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="flex justify-between items-start z-10">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase">Rata-rata Pertumbuhan Bulanan</p>
+<span class="material-symbols-outlined text-secondary" data-icon="trending_up">trending_up</span>
+</div>
+<div class="flex items-baseline gap-2 z-10">
+<h3 class="font-display-lg text-display-lg text-primary">+12.5%</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">vs bulan lalu</span>
+</div>
+<!-- Decorative bg element -->
+<div class="absolute -bottom-4 -right-4 w-24 h-24 bg-tertiary-fixed opacity-50 rounded-full blur-xl"></div>
+</div>
+<!-- KPI 2 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant ambient-shadow flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="flex justify-between items-start z-10">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase">Total Pengguna Aktif (Konsumen)</p>
+<span class="material-symbols-outlined text-primary" data-icon="group">group</span>
+</div>
+<div class="flex items-baseline gap-2 z-10">
+<h3 class="font-display-lg text-display-lg text-primary">2.450</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">users</span>
+</div>
+</div>
+<!-- KPI 3 -->
+<div class="bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant ambient-shadow flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="flex justify-between items-start z-10">
+<p class="font-label-md text-label-md text-on-surface-variant uppercase">Tingkat Retensi Pelanggan</p>
+<span class="material-symbols-outlined text-primary" data-icon="autorenew">autorenew</span>
+</div>
+<div class="flex items-baseline gap-2 z-10">
+<h3 class="font-display-lg text-display-lg text-primary">68%</h3>
+<span class="font-body-sm text-body-sm text-on-surface-variant">rata-rata portfolio</span>
+</div>
+<!-- Decorative bg element -->
+<div class="absolute -top-4 -right-4 w-16 h-16 bg-secondary-fixed opacity-50 rounded-full blur-lg"></div>
+</div>
+</section>
+<!-- Chart & Insights Layout -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-gutter">
+<!-- Chart Main Area -->
+<div class="lg:col-span-2 bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant ambient-shadow flex flex-col">
+<div class="flex justify-between items-center mb-stack-md border-b border-surface-container pb-2">
+<h2 class="font-headline-md text-headline-md text-primary">Tren Pertumbuhan Bisnis &amp; Pengguna</h2>
+<button class="text-primary text-body-sm font-button hover:underline">Lihat Detail</button>
+</div>
+<div class="flex-1 min-h-[300px] w-full relative bg-surface-bright rounded-lg border border-surface-container overflow-hidden flex items-center justify-center">
+<!-- Placeholder for actual chart implementation -->
+<div class="absolute inset-0 p-4 flex flex-col justify-between">
+<!-- Y Axis Lines -->
+<div class="w-full border-t border-surface-container-high h-0"></div>
+<div class="w-full border-t border-surface-container-high h-0"></div>
+<div class="w-full border-t border-surface-container-high h-0"></div>
+<div class="w-full border-t border-surface-container-high h-0"></div>
+<div class="w-full border-t border-surface-container-high h-0"></div>
+</div>
+<!-- Mock Line SVG for visual representation -->
+<svg class="absolute inset-0 w-full h-full z-10" preserveaspectratio="none" viewbox="0 0 100 100">
+<!-- Navy Line -->
+<path d="M0,80 Q20,70 40,50 T80,30 T100,20" fill="none" stroke="#000666" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<!-- Gold Line -->
+<path d="M0,90 Q30,85 50,60 T70,55 T100,40" fill="none" stroke="#fdc003" stroke-dasharray="4 2" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+</svg>
+<!-- X Axis Labels Mock -->
+<div class="absolute bottom-2 left-0 right-0 flex justify-between px-8 text-on-surface-variant font-label-md text-[10px]">
+<span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>Mei</span><span>Jun</span>
+</div>
+<div class="absolute top-4 left-4 flex gap-4 bg-surface-container-lowest/80 p-2 rounded backdrop-blur-sm border border-outline-variant z-20">
+<div class="flex items-center gap-2"><span class="w-3 h-3 bg-primary rounded-sm"></span><span class="font-label-md text-[10px]">Pendapatan</span></div>
+<div class="flex items-center gap-2"><span class="w-3 h-3 bg-secondary-container rounded-sm"></span><span class="font-label-md text-[10px]">Pengguna Baru</span></div>
+</div>
+</div>
+</div>
+<!-- Insights Sidebar -->
+<div class="lg:col-span-1 bg-surface-container-lowest p-stack-md rounded-xl border border-outline-variant ambient-shadow flex flex-col">
+<div class="mb-stack-md border-b border-surface-container pb-2">
+<h2 class="font-headline-md text-headline-md text-primary">Top Scalable Businesses</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Berdasarkan metrik akuisisi 30 hari terakhir</p>
+</div>
+<div class="flex flex-col gap-3 flex-1 overflow-y-auto">
+<!-- Insight Item -->
+<div class="p-3 border border-outline-variant rounded-lg hover:bg-surface-bright transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-button text-button text-primary group-hover:text-tertiary">EcoBite Delivery</h4>
+<span class="bg-secondary-fixed text-on-secondary-fixed text-[10px] px-2 py-0.5 rounded-full font-label-md uppercase">High</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">F&amp;B / Sustainable</p>
+<div class="mt-2 flex items-center gap-1 text-tertiary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                                    +45% MoM
+                                </div>
+</div>
+<!-- Insight Item -->
+<div class="p-3 border border-outline-variant rounded-lg hover:bg-surface-bright transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-button text-button text-primary group-hover:text-tertiary">StudyHub App</h4>
+<span class="bg-secondary-fixed text-on-secondary-fixed text-[10px] px-2 py-0.5 rounded-full font-label-md uppercase">High</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">EdTech</p>
+<div class="mt-2 flex items-center gap-1 text-tertiary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                                    +32% MoM
+                                </div>
+</div>
+<!-- Insight Item -->
+<div class="p-3 border border-outline-variant rounded-lg hover:bg-surface-bright transition-colors cursor-pointer group">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-button text-button text-primary group-hover:text-tertiary">ThriftCulture</h4>
+<span class="bg-primary-fixed text-on-primary-fixed text-[10px] px-2 py-0.5 rounded-full font-label-md uppercase">Moderate</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">E-Commerce / Fashion</p>
+<div class="mt-2 flex items-center gap-1 text-tertiary-container font-label-md text-label-md">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                                    +18% MoM
+                                </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Data Table Section -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant ambient-shadow overflow-hidden">
+<div class="p-stack-md border-b border-surface-container flex justify-between items-center bg-surface-bright">
+<h2 class="font-headline-md text-headline-md text-primary">Student Business Growth</h2>
+<button class="bg-transparent border border-primary text-primary px-4 py-2 rounded font-button text-button hover:bg-surface-container transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]" data-icon="download">download</span> Export
+                        </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant">
+<th class="p-4 font-label-md text-label-md text-primary uppercase">Nama Bisnis</th>
+<th class="p-4 font-label-md text-label-md text-primary uppercase">Kategori</th>
+<th class="p-4 font-label-md text-label-md text-primary uppercase text-right">Pertumbuhan Omzet</th>
+<th class="p-4 font-label-md text-label-md text-primary uppercase text-right">Akuisisi Pelanggan</th>
+<th class="p-4 font-label-md text-label-md text-primary uppercase text-center">Status Skalabilitas</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm">
+<!-- Row 1 -->
+<tr class="border-b border-surface-container hover:bg-surface-bright transition-colors">
+<td class="p-4 font-button text-on-surface">EcoBite Delivery</td>
+<td class="p-4 text-on-surface-variant">F&amp;B / Sustainable</td>
+<td class="p-4 text-right text-tertiary-container font-medium">+Rp 12.5M</td>
+<td class="p-4 text-right">450 users</td>
+<td class="p-4 text-center">
+<span class="inline-block bg-secondary-fixed text-on-secondary-fixed text-[10px] px-2 py-1 rounded-full font-label-md uppercase">High</span>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="border-b border-surface-container bg-[#F9F9F9] hover:bg-surface-container-high transition-colors">
+<td class="p-4 font-button text-on-surface">StudyHub App</td>
+<td class="p-4 text-on-surface-variant">EdTech</td>
+<td class="p-4 text-right text-tertiary-container font-medium">+Rp 8.2M</td>
+<td class="p-4 text-right">820 users</td>
+<td class="p-4 text-center">
+<span class="inline-block bg-secondary-fixed text-on-secondary-fixed text-[10px] px-2 py-1 rounded-full font-label-md uppercase">High</span>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="border-b border-surface-container hover:bg-surface-bright transition-colors">
+<td class="p-4 font-button text-on-surface">ThriftCulture</td>
+<td class="p-4 text-on-surface-variant">E-Commerce</td>
+<td class="p-4 text-right text-tertiary-container font-medium">+Rp 4.1M</td>
+<td class="p-4 text-right">120 users</td>
+<td class="p-4 text-center">
+<span class="inline-block bg-primary-fixed text-on-primary-fixed text-[10px] px-2 py-1 rounded-full font-label-md uppercase">Moderate</span>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="border-b border-surface-container bg-[#F9F9F9] hover:bg-surface-container-high transition-colors">
+<td class="p-4 font-button text-on-surface">Kopi Senja</td>
+<td class="p-4 text-on-surface-variant">F&amp;B Retail</td>
+<td class="p-4 text-right text-on-surface-variant font-medium">+Rp 1.5M</td>
+<td class="p-4 text-right">45 users</td>
+<td class="p-4 text-center">
+<span class="inline-block bg-surface-variant text-on-surface-variant text-[10px] px-2 py-1 rounded-full font-label-md uppercase">Emerging</span>
+</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface-bright transition-colors">
+<td class="p-4 font-button text-on-surface">TechRepair Campus</td>
+<td class="p-4 text-on-surface-variant">Services</td>
+<td class="p-4 text-right text-error font-medium">-Rp 500k</td>
+<td class="p-4 text-right">12 users</td>
+<td class="p-4 text-center">
+<span class="inline-block bg-error-container text-on-error-container text-[10px] px-2 py-1 rounded-full font-label-md uppercase">Review</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</main>
+</div>
+</body></html>

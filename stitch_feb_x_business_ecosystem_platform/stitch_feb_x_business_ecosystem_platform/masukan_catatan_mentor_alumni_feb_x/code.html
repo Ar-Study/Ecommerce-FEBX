@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+
+<html class="light" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Masukan &amp; Catatan - FEB-X</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#ffdf9e",
+                        "inverse-primary": "#bdc2ff",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "on-secondary-fixed": "#261a00",
+                        "on-secondary-container": "#6c5000",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "background": "#f9f9f9",
+                        "surface-variant": "#e2e2e2",
+                        "on-primary-container": "#8690ee",
+                        "on-primary-fixed": "#000767",
+                        "tertiary": "#000f5b",
+                        "on-primary-fixed-variant": "#343d96",
+                        "error-container": "#ffdad6",
+                        "tertiary-container": "#072189",
+                        "tertiary-fixed": "#dee0ff",
+                        "on-secondary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#293ca0",
+                        "surface-container": "#eeeeee",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f3f3f3",
+                        "on-surface-variant": "#454652",
+                        "outline-variant": "#c6c5d4",
+                        "surface-bright": "#f9f9f9",
+                        "secondary": "#785900",
+                        "primary-container": "#1a237e",
+                        "outline": "#767683",
+                        "secondary-fixed-dim": "#fabd00",
+                        "surface-tint": "#4c56af",
+                        "secondary-container": "#fdc003",
+                        "on-surface": "#1a1c1c",
+                        "primary-fixed": "#e0e0ff",
+                        "inverse-surface": "#2f3131",
+                        "surface": "#f9f9f9",
+                        "on-background": "#1a1c1c",
+                        "surface-container-highest": "#e2e2e2",
+                        "surface-container-high": "#e8e8e8",
+                        "primary": "#000666",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-container": "#7e90f8",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#bac3ff",
+                        "on-tertiary-fixed": "#00105c",
+                        "on-error-container": "#93000a",
+                        "surface-dim": "#dadada"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "40px",
+                        "container-max": "1440px",
+                        "stack-sm": "8px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "button": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-filled {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="w-64 h-screen fixed left-0 top-0 bg-surface-container-low dark:bg-surface-container-high flex flex-col gap-stack-sm p-stack-md pt-20 border-r border-outline-variant z-30 hidden md:flex">
+<div class="mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary">Program Mentoring</h2>
+<p class="font-label-md text-label-md text-on-surface-variant mt-unit">FEB-X Ecosystem</p>
+</div>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200 active:scale-95 text-on-surface-variant hover:bg-surface-container-highest rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-label-md text-label-md">Ringkasan</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200 active:scale-95 text-on-surface-variant hover:bg-surface-container-highest rounded-lg" href="#">
+<span class="material-symbols-outlined">handshake</span>
+<span class="font-label-md text-label-md">Bisnis Dampingan</span>
+</a>
+<a class="flex items-center gap-3 p-3 bg-primary-container text-on-primary-container font-semibold rounded-lg transition-all duration-200 active:scale-95" href="#">
+<span class="material-symbols-outlined icon-filled">edit_note</span>
+<span class="font-label-md text-label-md">Masukan &amp; Catatan</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200 active:scale-95 text-on-surface-variant hover:bg-surface-container-highest rounded-lg" href="#">
+<span class="material-symbols-outlined">hub</span>
+<span class="font-label-md text-label-md">Peluang Kolaborasi</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200 active:scale-95 text-on-surface-variant hover:bg-surface-container-highest rounded-lg" href="#">
+<span class="material-symbols-outlined">domain</span>
+<span class="font-label-md text-label-md">Profil Bisnis</span>
+</a>
+<a class="flex items-center gap-3 p-3 rounded-lg text-on-surface-variant hover:bg-surface-container-highest transition-all duration-200 active:scale-95 text-on-surface-variant hover:bg-surface-container-highest rounded-lg" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-label-md text-label-md">Pengaturan</span>
+</a>
+</nav>
+<!-- Main Wrapper -->
+<div class="flex-1 flex flex-col md:ml-64 w-full min-w-0">
+<!-- TopNavBar -->
+<header class="w-full h-16 sticky top-0 bg-surface-container-lowest dark:bg-surface-dim border-b border-outline-variant dark:border-outline flex justify-between items-center px-margin-desktop z-40">
+<div class="flex items-center gap-4">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-inverse-primary">FEB-X</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low transition-colors cursor-pointer active:opacity-80 rounded-full">
+<span class="material-symbols-outlined">search</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low transition-colors cursor-pointer active:opacity-80 rounded-full relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container-low transition-colors cursor-pointer active:opacity-80 rounded-full">
+<span class="material-symbols-outlined">account_circle</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-gutter max-w-container-max mx-auto w-full">
+<!-- Header Section -->
+<div class="mb-stack-lg">
+<h1 class="font-headline-lg text-headline-lg text-on-background">Masukan &amp; Catatan</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-unit">Berikan arahan strategis dan pantau progres implementasi masukan Anda.</p>
+</div>
+<!-- Dashboard Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column (Wider Workspace) -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Summary Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-stack-md">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-stack-md flex flex-col justify-between">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Total Masukan</span>
+<span class="material-symbols-outlined text-primary">chat</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-on-background block">48</span>
+<span class="font-body-sm text-body-sm text-tertiary-container">+3 bulan ini</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-stack-md flex flex-col justify-between">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant">Belum Selesai</span>
+<span class="material-symbols-outlined text-secondary-container">pending_actions</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg text-on-background block">5</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Perlu review</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-stack-md flex flex-col justify-between relative overflow-hidden">
+<div class="flex justify-between items-start mb-2 relative z-10">
+<span class="font-label-md text-label-md text-on-surface-variant">Implementasi</span>
+<span class="material-symbols-outlined text-primary">trending_up</span>
+</div>
+<div class="relative z-10">
+<span class="font-headline-lg text-headline-lg text-on-background block">85%</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Tingkat rata-rata</span>
+</div>
+<div class="absolute bottom-0 left-0 h-1 bg-surface-container w-full">
+<div class="h-full bg-primary" style="width: 85%;"></div>
+</div>
+</div>
+</div>
+<!-- Feedback Workspace Table -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg overflow-hidden flex flex-col flex-1">
+<div class="p-stack-md border-b border-outline-variant flex justify-between items-center bg-surface-bright">
+<h3 class="font-headline-md text-headline-md text-on-background">Riwayat Masukan</h3>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 border border-outline-variant rounded text-button font-button text-on-surface-variant hover:bg-surface-container-low transition flex items-center gap-1">
+<span class="material-symbols-outlined text-[18px]">filter_list</span> Filter
+                                </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse min-w-[700px]">
+<thead class="bg-surface-container-lowest border-b border-outline-variant">
+<tr>
+<th class="p-3 font-label-md text-label-md text-primary w-24">Tanggal</th>
+<th class="p-3 font-label-md text-label-md text-primary">Nama Bisnis</th>
+<th class="p-3 font-label-md text-label-md text-primary">Topik Masukan</th>
+<th class="p-3 font-label-md text-label-md text-primary">Status</th>
+<th class="p-3 font-label-md text-label-md text-primary text-right">Aksi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-outline-variant/50 hover:bg-surface-bright transition">
+<td class="p-3 font-body-sm text-body-sm text-on-surface-variant">12 Okt 23</td>
+<td class="p-3 font-body-sm text-body-sm text-on-background font-semibold">Finteka Solutions</td>
+<td class="p-3 font-body-sm text-body-sm text-on-surface-variant">Model Bisnis (B2B Pivot)</td>
+<td class="p-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-tertiary-fixed text-on-tertiary-fixed-variant">
+                                                Dalam Review
+                                            </span>
+</td>
+<td class="p-3 text-right">
+<button class="text-primary hover:text-tertiary-container"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/50 hover:bg-surface-bright transition bg-background">
+<td class="p-3 font-body-sm text-body-sm text-on-surface-variant">05 Okt 23</td>
+<td class="p-3 font-body-sm text-body-sm text-on-background font-semibold">AgriGrow</td>
+<td class="p-3 font-body-sm text-body-sm text-on-surface-variant">Strategi Pemasaran Digital</td>
+<td class="p-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-surface-container-high text-on-surface-variant">
+                                                Diimplementasikan
+                                            </span>
+</td>
+<td class="p-3 text-right">
+<button class="text-primary hover:text-tertiary-container"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/50 hover:bg-surface-bright transition">
+<td class="p-3 font-body-sm text-body-sm text-on-surface-variant">28 Sep 23</td>
+<td class="p-3 font-body-sm text-body-sm text-on-background font-semibold">EduTech Nusantara</td>
+<td class="p-3 font-body-sm text-body-sm text-on-surface-variant">Struktur Biaya Operasional</td>
+<td class="p-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-error-container text-on-error-container">
+                                                Ditolak (Perlu Revisi)
+                                            </span>
+</td>
+<td class="p-3 text-right">
+<button class="text-primary hover:text-tertiary-container"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant/50 hover:bg-surface-bright transition bg-background">
+<td class="p-3 font-body-sm text-body-sm text-on-surface-variant">15 Sep 23</td>
+<td class="p-3 font-body-sm text-body-sm text-on-background font-semibold">Finteka Solutions</td>
+<td class="p-3 font-body-sm text-body-sm text-on-surface-variant">Proyeksi Arus Kas Q4</td>
+<td class="p-3">
+<span class="inline-flex items-center px-2 py-0.5 rounded text-[11px] font-medium bg-surface-container-high text-on-surface-variant">
+                                                Diimplementasikan
+                                            </span>
+</td>
+<td class="p-3 text-right">
+<button class="text-primary hover:text-tertiary-container"><span class="material-symbols-outlined text-[20px]">visibility</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-3 border-t border-outline-variant text-center bg-surface-bright">
+<button class="text-primary font-button text-button hover:underline">Lihat Semua Riwayat</button>
+</div>
+</div>
+</div>
+<!-- Right Column (Sidebar Tools) -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Quick Add Note Panel -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-stack-md">
+<h3 class="font-headline-md text-headline-md text-on-background mb-stack-sm flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">add_comment</span>
+                            Catat Cepat
+                        </h3>
+<form class="flex flex-col gap-3">
+<div>
+<label class="block font-body-sm text-body-sm font-medium text-on-surface-variant mb-1">Pilih Bisnis</label>
+<select class="w-full border border-outline-variant rounded p-2 bg-surface-lowest text-body-sm font-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors">
+<option>Finteka Solutions</option>
+<option>AgriGrow</option>
+<option>EduTech Nusantara</option>
+</select>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm font-medium text-on-surface-variant mb-1">Topik Utama</label>
+<input class="w-full border border-outline-variant rounded p-2 bg-surface-lowest text-body-sm font-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors" placeholder="Misal: Perbaikan UI/UX" type="text"/>
+</div>
+<div>
+<label class="block font-body-sm text-body-sm font-medium text-on-surface-variant mb-1">Catatan Strategis</label>
+<textarea class="w-full border border-outline-variant rounded p-2 bg-surface-lowest text-body-sm font-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-colors resize-none" placeholder="Tulis masukan Anda di sini..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary font-button text-button py-2 rounded mt-2 hover:bg-tertiary-container transition-colors shadow-sm" type="submit">
+                                Kirim Masukan
+                            </button>
+</form>
+</div>
+<!-- Recent Activity Feed -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-stack-md flex-1">
+<h3 class="font-headline-md text-headline-md text-on-background mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">history</span>
+                            Aktivitas Terkini
+                        </h3>
+<div class="flex flex-col gap-4 relative">
+<!-- Timeline line -->
+<div class="absolute left-2.5 top-2 bottom-2 w-[1px] bg-outline-variant/50"></div>
+<!-- Activity Item 1 -->
+<div class="flex gap-3 relative z-10">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest border-2 border-primary flex items-center justify-center shrink-0 mt-0.5">
+<div class="w-1.5 h-1.5 rounded-full bg-primary"></div>
+</div>
+<div>
+<p class="font-body-sm text-body-sm text-on-background">
+<span class="font-semibold">Tim Finteka</span> mengunggah dokumen revisi untuk <span class="font-medium text-primary">Model Bisnis</span>.
+                                    </p>
+<span class="font-label-md text-label-md text-on-surface-variant block mt-0.5">2 jam yang lalu</span>
+</div>
+</div>
+<!-- Activity Item 2 -->
+<div class="flex gap-3 relative z-10">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center shrink-0 mt-0.5">
+</div>
+<div>
+<p class="font-body-sm text-body-sm text-on-background">
+                                        Anda menyetujui implementasi <span class="font-medium text-primary">Strategi Pemasaran Digital</span> untuk <span class="font-semibold">AgriGrow</span>.
+                                    </p>
+<span class="font-label-md text-label-md text-on-surface-variant block mt-0.5">Kemarin, 14:30</span>
+</div>
+</div>
+<!-- Activity Item 3 -->
+<div class="flex gap-3 relative z-10">
+<div class="w-5 h-5 rounded-full bg-surface-container-lowest border-2 border-outline-variant flex items-center justify-center shrink-0 mt-0.5">
+</div>
+<div>
+<p class="font-body-sm text-body-sm text-on-background">
+<span class="font-semibold">EduTech Nusantara</span> merespon masukan Anda terkait <span class="font-medium text-primary">Struktur Biaya Operasional</span>.
+                                    </p>
+<span class="font-label-md text-label-md text-on-surface-variant block mt-0.5">3 hari yang lalu</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>

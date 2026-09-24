@@ -1,0 +1,381 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>FEB-X - Dashboard Mentor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-secondary": "#ffffff",
+                        "on-surface-variant": "#454652",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#dee0ff",
+                        "on-secondary-fixed": "#261a00",
+                        "secondary-fixed-dim": "#fabd00",
+                        "on-primary-fixed": "#000767",
+                        "secondary": "#785900",
+                        "tertiary-container": "#072189",
+                        "tertiary": "#000f5b",
+                        "tertiary-fixed-dim": "#bac3ff",
+                        "primary-container": "#1a237e",
+                        "on-primary-fixed-variant": "#343d96",
+                        "surface-dim": "#dadada",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#293ca0",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "on-tertiary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-primary-container": "#8690ee",
+                        "error": "#ba1a1a",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed": "#00105c",
+                        "secondary-fixed": "#ffdf9e",
+                        "surface-variant": "#e2e2e2",
+                        "surface-bright": "#f9f9f9",
+                        "primary-fixed": "#e0e0ff",
+                        "on-background": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-tint": "#4c56af",
+                        "outline": "#767683",
+                        "surface-container-low": "#f3f3f3",
+                        "surface": "#f9f9f9",
+                        "on-secondary-container": "#6c5000",
+                        "on-surface": "#1a1c1c",
+                        "inverse-surface": "#2f3131",
+                        "surface-container": "#eeeeee",
+                        "inverse-primary": "#bdc2ff",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "on-tertiary-container": "#7e90f8",
+                        "outline-variant": "#c6c5d4",
+                        "surface-container-high": "#e8e8e8",
+                        "primary": "#000666",
+                        "secondary-container": "#fdc003"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "unit": "4px",
+                        "margin-mobile": "16px",
+                        "stack-sm": "8px",
+                        "container-max": "1440px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "body-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "button": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .ambient-shadow {
+            box-shadow: 0 4px 16px rgba(0, 6, 102, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col md:flex-row">
+<!-- Desktop Side Nav -->
+<nav class="hidden md:flex bg-surface-container-low dark:bg-surface-container-lowest font-label-md text-label-md h-full w-64 border-r border-outline-variant dark:border-outline fixed left-0 top-0 flex-col p-stack-md z-40">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-8 mt-4 px-4 flex items-center gap-3">
+<div class="w-10 h-10 rounded bg-primary text-on-primary flex items-center justify-center font-display-lg text-2xl">X</div>
+<div>
+<div class="">Panel Kontrol</div>
+<div class="font-label-md text-label-md text-on-surface-variant font-normal tracking-normal mt-1">FEB-X Ecosystem</div>
+</div>
+</div>
+<div class="flex-grow flex flex-col gap-2"><a class="flex items-center gap-3 bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-lg px-4 py-3 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Ringkasan
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="business_center">business_center</span>
+                Bisnis Dampingan
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="rate_review">rate_review</span>
+                Masukan &amp; Catatan
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+                Peluang Kolaborasi
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+                Profil Bisnis
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Pengaturan
+            </a></div>
+<div class="mt-auto flex flex-col gap-2 pt-4 border-t border-outline-variant">
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                Bantuan
+            </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                Keluar
+            </a>
+<button class="mt-4 bg-primary text-on-primary font-button text-button py-3 px-4 rounded-lg w-full flex items-center justify-center gap-2 hover:bg-primary-container transition-colors focus:outline-none focus:ring-2 focus:ring-secondary-fixed focus:ring-offset-2">
+                Buka Laporan
+            </button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<div class="flex-1 flex flex-col md:ml-64 w-full">
+<!-- Top App Bar (Mobile) -->
+<header class="md:hidden bg-surface-container-lowest dark:bg-surface-dim font-body-md text-body-md w-full sticky top-0 z-50 flex justify-between items-center px-margin-mobile h-16 shadow-sm">
+<div class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">FEB-X</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container p-2 rounded-full transition-colors cursor-pointer active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<img class="w-8 h-8 rounded-full border border-outline-variant object-cover" data-alt="A small, circular avatar portrait of a professional mentor in a modern corporate setting. The lighting is bright and even, highlighting a friendly expression. The background is a subtle, out-of-focus office environment. The image is designed to look like a high-quality user profile picture for an enterprise dashboard, adhering to a clean, professional aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo8INLHoVg1WIUr-nJarrI_us2C35QpcfNpgS1KVHdWM727iZCVMJANSG9jgcSBXS035axJ9qboxoOkJuQDr2oC0Gmo7vaanP_xoI_Mi89KloOXFBFW9IIFJg5UYFSFxPpM5zeVU9L7klP1RzZqVYwXEA8lJnGMug7Mk02YhM53Ycd4clDyCA9YRON82iC6wwiMYG5VQCf0GyYdOEofI1HsAM4FsCS5DaJj7nMipjTtINzFQ5ZJctgeQ">
+</div>
+</header>
+<!-- Top App Bar (Desktop - specific to intent, replacing standard nav links with context) -->
+<header class="hidden md:flex bg-surface-container-lowest font-body-md text-body-md w-full sticky top-0 z-30 justify-between items-center px-margin-desktop h-16 border-b border-outline-variant">
+<h1 class="font-headline-lg text-headline-lg text-primary">Dashboard Pendampingan</h1>
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 border border-outline-variant rounded bg-surface focus:border-primary focus:border-2 focus:outline-none font-body-sm text-body-sm w-64 transition-all" placeholder="Cari bisnis..." type="text">
+</div>
+<button class="text-on-surface-variant hover:bg-surface-container p-2 rounded-full transition-colors cursor-pointer">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<div class="flex items-center gap-3 ml-4 pl-4 border-l border-outline-variant">
+<div class="text-right">
+<div class="font-button text-button text-on-surface">Dr. Hendra Saputra</div>
+<div class="font-label-md text-label-md text-on-surface-variant">Senior Mentor</div>
+</div>
+<img class="w-10 h-10 rounded-full border border-outline-variant object-cover" data-alt="A high-quality, circular avatar portrait of an experienced male business mentor. He is wearing a professional navy blue suit jacket over a light shirt. The lighting is soft and flattering, suitable for a corporate profile. The background is a clean, minimal light gray, aligning with a premium, light-mode enterprise UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGMgbo7tUzRT1MKc2gdN6ww7DlPW5Zp-xZ9wjN7BFjO6afS-fvogUmwGSkeaolyQEoxvEFyrDq9g-jRmM92WewLXH0sNCDwQ5TrvTBDcZBenLQqppr9MkRrusIOhWzWSSP5ixGUaOisry5NANoU2x0z_qXr_Tn8FHsFJqC3ZFRoazxrStIQ6EsutkPSYKCcB9-KBIUsQiJvkFdcTvdtDYtsS1YFZR0eoKLhR2fCKiNc-TsBvLQsPB3BQ">
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-1 p-margin-mobile md:p-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-gutter max-w-container-max mx-auto w-full">
+<!-- Left Column: Active Mentorships & Milestones (Spans 8 cols on large screens) -->
+<div class="lg:col-span-8 flex flex-col gap-stack-lg">
+<!-- Overview Stats -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant flex flex-col justify-between ambient-shadow">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Total Bisnis</span>
+<span class="material-symbols-outlined text-primary" data-icon="storefront">storefront</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">12</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant flex flex-col justify-between ambient-shadow">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Perlu Review</span>
+<span class="material-symbols-outlined text-error" data-icon="assignment_late">assignment_late</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">3</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant flex flex-col justify-between ambient-shadow">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Milestone Tercapai</span>
+<span class="material-symbols-outlined text-secondary-container" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">85%</div>
+</div>
+<div class="bg-surface-container-lowest p-4 rounded-lg border border-outline-variant flex flex-col justify-between ambient-shadow">
+<div class="flex justify-between items-start mb-2">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Sesi Mendatang</span>
+<span class="material-symbols-outlined text-primary" data-icon="event">event</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface">4</div>
+</div>
+</div>
+<!-- Active Businesses Bento Grid -->
+<div>
+<div class="flex justify-between items-end mb-4 border-b border-outline-variant pb-2">
+<h2 class="font-headline-md text-headline-md text-primary">Bisnis Dampingan</h2>
+<a class="font-button text-button text-primary hover:underline" href="#">Lihat Semua</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Business Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 ambient-shadow relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary-container"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-primary-container rounded flex items-center justify-center text-on-primary-container font-headline-md">AV</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-xl">AgroVision</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">AgriTech B2B</p>
+</div>
+</div>
+<span class="bg-secondary-fixed text-on-secondary-fixed px-2 py-1 rounded text-xs font-label-md uppercase">Fase Pertumbuhan</span>
+</div>
+<div class="mb-4">
+<div class="flex justify-between font-label-md text-label-md text-on-surface-variant mb-1">
+<span class="">Milestone Q2</span>
+<span class="">75%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-on-primary font-button text-button py-2 rounded flex items-center justify-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="edit_note">edit_note</span> Catatan
+                                </button>
+<button class="flex-1 border border-primary text-primary font-button text-button py-2 rounded flex items-center justify-center gap-2 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="analytics">analytics</span> Data
+                                </button>
+</div>
+</div>
+<!-- Business Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 ambient-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
+<div class="flex justify-between items-start mb-4">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 bg-tertiary-container rounded flex items-center justify-center text-on-tertiary-container font-headline-md">EL</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-xl">EduLokal</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">EdTech Platform</p>
+</div>
+</div>
+<span class="bg-error-container text-on-error-container px-2 py-1 rounded text-xs font-label-md uppercase">Perlu Review</span>
+</div>
+<div class="mb-4">
+<div class="flex justify-between font-label-md text-label-md text-on-surface-variant mb-1">
+<span class="">Milestone Q2</span>
+<span class="">40%</span>
+</div>
+<div class="w-full bg-surface-variant rounded-full h-2">
+<div class="bg-error h-2 rounded-full" style="width: 40%"></div>
+</div>
+</div>
+<div class="flex gap-2">
+<button class="flex-1 bg-primary text-on-primary font-button text-button py-2 rounded flex items-center justify-center gap-2 hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="edit_note">edit_note</span> Catatan
+                                </button>
+<button class="flex-1 border border-primary text-primary font-button text-button py-2 rounded flex items-center justify-center gap-2 hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-sm" data-icon="analytics">analytics</span> Data
+                                </button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Collaboration & Immediate Actions (Spans 4 cols on large screens) -->
+<div class="lg:col-span-4 flex flex-col gap-stack-lg">
+<!-- Quick Notes / Actions Widget -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-6 ambient-shadow">
+<h2 class="font-headline-md text-headline-md text-primary mb-4 flex items-center gap-2 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined" data-icon="bolt">bolt</span> Aksi Cepat
+                    </h2>
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-on-surface-variant text-sm" data-icon="schedule">schedule</span>
+</div>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-surface">Jadwalkan review pivot model bisnis <span class="font-semibold text-primary">AgroVision</span>.</p>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">Hari ini, 14:00</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<div class="w-8 h-8 rounded-full bg-error-container flex items-center justify-center mt-1">
+<span class="material-symbols-outlined text-on-error-container text-sm" data-icon="warning">warning</span>
+</div>
+<div class="flex-1">
+<p class="font-body-sm text-body-sm text-on-surface">Beri feedback pada proposal pendanaan <span class="font-semibold text-primary">EduLokal</span>.</p>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">Tenggat: Besok</p>
+</div>
+</li>
+</ul>
+<button class="mt-6 w-full border border-primary text-primary font-button text-button py-2 rounded hover:bg-surface-container transition-colors">
+                        Lihat Semua Tugas
+                    </button>
+</div>
+<!-- Collaboration Opportunities Widget (Glassmorphism touch for premium feel) -->
+<div class="bg-gradient-to-br from-surface-container-lowest to-surface-container rounded-xl border border-outline-variant p-6 ambient-shadow relative overflow-hidden">
+<!-- Decorative pattern overlay -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-fixed-dim/20 to-transparent pointer-events-none"></div>
+<h2 class="font-headline-md text-headline-md text-primary mb-4 flex items-center gap-2 border-b border-outline-variant pb-2 relative z-10">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span> Peluang Kolaborasi
+                    </h2>
+<div class="space-y-4 relative z-10">
+<!-- Match 1 -->
+<div class="p-3 rounded-lg border border-outline-variant bg-surface/50 backdrop-blur-sm hover:bg-surface transition-colors cursor-pointer">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-button text-button text-on-surface">TechFest Investor Pitch</h4>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded text-[10px] font-label-md uppercase">Cocok: EduLokal</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">Peluang pendanaan awal untuk startup edtech di Jawa Barat.</p>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1">
+                                Rekomendasikan <span class="material-symbols-outlined text-[14px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<!-- Match 2 -->
+<div class="p-3 rounded-lg border border-outline-variant bg-surface/50 backdrop-blur-sm hover:bg-surface transition-colors cursor-pointer">
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-button text-button text-on-surface">B2B Agri Supply Chain</h4>
+<span class="bg-tertiary-fixed text-on-tertiary-fixed px-2 py-0.5 rounded text-[10px] font-label-md uppercase">Cocok: AgroVision</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">Kemitraan strategis dengan pemasok pupuk lokal berskala besar.</p>
+<button class="text-primary font-label-md text-label-md hover:underline flex items-center gap-1">
+                                Rekomendasikan <span class="material-symbols-outlined text-[14px]" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Mobile Bottom Nav (Suppressed on large screens, mapped to Side Nav logic) -->
+<nav class="md:hidden bg-surface-container-lowest border-t border-outline-variant fixed bottom-0 left-0 right-0 w-full flex justify-around items-center h-16 pb-safe z-50">
+<a class="flex flex-col items-center justify-center w-full h-full text-primary font-bold border-t-2 border-secondary" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="dashboard" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span class="font-label-md text-[10px]">Ringkasan</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:bg-surface-container" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="storefront">storefront</span>
+<span class="font-label-md text-[10px]">Bisnis</span>
+</a>
+<a class="flex flex-col items-center justify-center w-full h-full text-on-surface-variant hover:bg-surface-container" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
+<span class="font-label-md text-[10px]">Pengaturan</span>
+</a>
+</nav>
+
+
+</body></html>

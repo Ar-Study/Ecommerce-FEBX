@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Data Bisnis - FEB-X</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#fdc003",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#454652",
+                        "surface-container-low": "#f3f3f3",
+                        "secondary": "#785900",
+                        "outline": "#767683",
+                        "primary-fixed": "#e0e0ff",
+                        "surface-bright": "#f9f9f9",
+                        "primary-container": "#1a237e",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#4c56af",
+                        "on-background": "#1a1c1c",
+                        "on-tertiary-fixed-variant": "#293ca0",
+                        "on-secondary-container": "#6c5000",
+                        "on-error": "#ffffff",
+                        "inverse-on-surface": "#f1f1f1",
+                        "tertiary-fixed-dim": "#bac3ff",
+                        "inverse-surface": "#2f3131",
+                        "surface-dim": "#dadada",
+                        "primary": "#000666",
+                        "on-surface": "#1a1c1c",
+                        "secondary-fixed-dim": "#fabd00",
+                        "on-tertiary-fixed": "#00105c",
+                        "secondary-fixed": "#ffdf9e",
+                        "on-secondary-fixed": "#261a00",
+                        "tertiary-fixed": "#dee0ff",
+                        "on-primary-fixed": "#000767",
+                        "on-primary-fixed-variant": "#343d96",
+                        "outline-variant": "#c6c5d4",
+                        "tertiary-container": "#072189",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#e8e8e8",
+                        "on-primary": "#ffffff",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "tertiary": "#000f5b",
+                        "surface-variant": "#e2e2e2",
+                        "on-error-container": "#93000a",
+                        "surface": "#f9f9f9",
+                        "on-primary-container": "#8690ee",
+                        "background": "#f9f9f9",
+                        "surface-container": "#eeeeee",
+                        "inverse-primary": "#bdc2ff",
+                        "surface-container-highest": "#e2e2e2",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#7e90f8",
+                        "on-secondary-fixed-variant": "#5b4300"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "stack-md": "16px",
+                        "stack-lg": "32px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "unit": "4px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "button": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "headline-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface-container-lowest dark:bg-surface-dim flex justify-between items-center w-full px-margin-desktop h-16 sticky top-0 z-50 border-b border-outline-variant dark:border-outline flat no shadows">
+<div class="flex items-center gap-stack-lg">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">FEB-X</span>
+<div class="relative w-64 hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-DEFAULT py-2 pl-10 pr-4 font-body-sm text-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Cari..." type="text">
+</div>
+</div>
+<nav class="hidden md:flex items-center gap-stack-md font-body-md text-body-md text-on-surface-variant dark:text-on-surface-variant">
+<a class="cursor-pointer active:opacity-80 transition-opacity hover:bg-surface-container dark:hover:bg-surface-container-high px-3 py-2 rounded-DEFAULT" href="#">Marketplace</a>
+<a class="cursor-pointer active:opacity-80 transition-opacity hover:bg-surface-container dark:hover:bg-surface-container-high px-3 py-2 rounded-DEFAULT" href="#">Dashboard</a>
+<a class="cursor-pointer active:opacity-80 transition-opacity hover:bg-surface-container dark:hover:bg-surface-container-high px-3 py-2 rounded-DEFAULT" href="#">Evaluasi</a>
+</nav>
+<div class="flex items-center gap-stack-md">
+<button class="text-on-surface-variant hover:bg-surface-container p-2 rounded-full transition-colors cursor-pointer active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container p-2 rounded-full transition-colors cursor-pointer active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="bg-primary text-on-primary font-button text-button px-4 py-2 rounded-DEFAULT cursor-pointer active:opacity-80 transition-opacity hover:bg-primary/90">
+                SSO Login
+            </button>
+</div>
+</header>
+<div class="flex h-[calc(100vh-64px)] overflow-hidden">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-16 h-[calc(100vh-64px)] flex flex-col p-stack-md z-40 bg-surface-container-low dark:bg-surface-container-lowest text-primary dark:text-primary-fixed font-label-md text-label-md docked left-0 h-full w-64 border-r border-outline-variant dark:border-outline flat no shadows hidden md:flex transition-all duration-200 ease-in-out">
+<div class="flex items-center gap-3 mb-stack-lg px-2">
+<img alt="University logo" class="w-10 h-10 rounded-full object-cover border border-outline-variant" data-alt="A clean, modern minimalist logo for a university business school fintech program. Deep navy blue and subtle gold accents. High-resolution, professional academic aesthetic, flat design on a crisp white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuARh45M4Tp7BbfBDstKonXehXa0jxOtFD6cmlgXSB8cyuTRQYvIsCf8IHGBCw4lXakjBbAsfymmk5RF02vlFDjGcZvM4y7s0F51_Rc-qbSH_-15XDm770wfLk0eLy3hRf4XYxJq4x5wRfAIiNyiw7sJ5j_X3JoL68GahLQUFCnMR7SfY46_Q5_jk2y1iAOHwd8SmB6JN9gt2R2_lwjVfLkZk-NInYm2zUzBHcTB4JuFodearK6TznVMYQ">
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-primary">Panel Kontrol</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">FEB-X Ecosystem</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Ringkasan
+                </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="payments">payments</span>
+                    Pendapatan
+                </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+                    Pertumbuhan
+                </a>
+<a class="flex items-center gap-3 bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-lg px-4 py-3 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+                    Data Bisnis
+                </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="school">school</span>
+                    Akademik
+                </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                    Pengaturan
+                </a>
+</nav>
+<div class="mt-auto space-y-stack-sm pt-stack-md border-t border-outline-variant">
+<button class="w-full bg-surface-container-highest text-primary font-button text-button py-2 rounded-lg hover:bg-outline-variant transition-colors mb-4">
+                    Buka Laporan
+                </button>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+                    Bantuan
+                </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 rounded-lg transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+                    Keluar
+                </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 overflow-y-auto bg-surface p-margin-mobile md:p-margin-desktop">
+<header class="mb-stack-lg">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-semibold text-primary mb-unit">Data Bisnis</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Kelola operasional, inventaris, dan informasi bisnis Anda.</p>
+</header>
+<div class="grid grid-cols-1 xl:grid-cols-12 gap-gutter">
+<!-- Center Column (Products & Orders) -->
+<div class="xl:col-span-9 flex flex-col gap-stack-lg">
+<!-- Katalog Produk -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md shadow-sm">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Katalog Produk</h2>
+<button class="bg-primary text-on-primary font-button text-button px-4 py-2 rounded-DEFAULT flex items-center gap-2 hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+                                Tambah Produk
+                            </button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant font-label-md text-label-md text-primary uppercase bg-surface-container-low">
+<th class="p-3 font-medium">Nama Produk</th>
+<th class="p-3 font-medium">Kategori</th>
+<th class="p-3 font-medium text-right">Harga</th>
+<th class="p-3 font-medium text-center">Stok</th>
+<th class="p-3 font-medium text-center">Status</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<tr class="border-b border-surface-variant hover:bg-surface-bright transition-colors h-12">
+<td class="p-3 flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-variant rounded-DEFAULT flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A clean, brightly lit product photography shot of a sleek university branded notebook and premium pen set. Minimalist styling, shallow depth of field, set against a pristine white background with soft, diffused studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLp1FIwz6rT8A7loIkUJfYP_e0nl1F-LXUL1Y0Rn5yYi4MALkdu_uRgYTUkgM-RVaNd-6YbeihPWFA9kY68xh8pwcmFMlBETLQI3uSzuDPsW5YJD3hHABJC89XCFcukoCB8KrNWnPSEV-SoOFYZhDR89bZyXQIbobcrwOB9dQPXcRCSD1Dx3UVJ_79J0ESm87_qjww3TNvGMwxuUE8_zLgBLBt-U6OoGoJtvAgNAGQr8V5dv-SWqnXwQ">
+</div>
+<span class="font-medium">Jurnal Akademik Premium</span>
+</td>
+<td class="p-3 text-on-surface-variant">Alat Tulis</td>
+<td class="p-3 text-right">Rp 45.000</td>
+<td class="p-3 text-center">120</td>
+<td class="p-3 text-center"><span class="bg-primary-fixed text-on-primary-fixed-variant px-2 py-1 rounded-full text-xs">Aktif</span></td>
+</tr>
+<tr class="border-b border-surface-variant hover:bg-surface-bright transition-colors h-12 bg-[#F9F9F9]">
+<td class="p-3 flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-variant rounded-DEFAULT flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A modern, high-quality photograph of a stylish minimalist canvas tote bag featuring a subtle university emblem. The bag is neatly arranged on a clean, light-colored surface with bright, even daylighting. Professional e-commerce style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaWfvyYhkhVQ0Ir_GjQ0gocKikJcbh_yuj8_L8z5OVm2asS2fOMZFhofwl0iUcBNQ05g_OC_ODc9QMH04urUMZXwAjvCfF1gAw78so6M5_8jvXoo4oyC3cBx8l3Xy96GAORP9GLc99ykix7FLGgWxWgzci2wxqx-krGAGz7WxbuwcEZNo5sGLrii6p0EG8Jg0AAgFcd3PmwpUD_bFTw2mCpRBE4z4mf_qfFy-6RPaxoXPmt8ifWORmgw">
+</div>
+<span class="font-medium">Tote Bag FEB-X Edisi Terbatas</span>
+</td>
+<td class="p-3 text-on-surface-variant">Merchandise</td>
+<td class="p-3 text-right">Rp 85.000</td>
+<td class="p-3 text-center">45</td>
+<td class="p-3 text-center"><span class="bg-primary-fixed text-on-primary-fixed-variant px-2 py-1 rounded-full text-xs">Aktif</span></td>
+</tr>
+<tr class="border-b border-surface-variant hover:bg-surface-bright transition-colors h-12">
+<td class="p-3 flex items-center gap-3">
+<div class="w-8 h-8 bg-surface-variant rounded-DEFAULT flex items-center justify-center overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A professional studio shot of an insulated stainless steel water bottle in deep navy blue with a subtle gold logo. The product is presented on a clean white backdrop with soft, sophisticated lighting, emphasizing its sleek, modern design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJTcFu1rEoVtr3XaEiHwghFd-vTgk7edolL3GwSbhAp6K_8fIuP_1t2RCyjb9D8tkF7Tqdmxmr081446UgOaL7Cxv4IBxpTwh8bkG2ghjW7lK-hdCSmnGnyZP2ewwrvMpta3UE7HBbTn8cmFwyEDBTOwlSI9T-Uh-aV-TlC7Pqan-7tOmZ44Ni5q9gOFJTfdOid3uDfJsedbay1_E1n8yC_pm9LXM_r9r5tKhXbiXUeNpkIDrYMmLszA">
+</div>
+<span class="font-medium">Botol Minum Insulasi</span>
+</td>
+<td class="p-3 text-on-surface-variant">Merchandise</td>
+<td class="p-3 text-right">Rp 120.000</td>
+<td class="p-3 text-center text-error font-medium">5</td>
+<td class="p-3 text-center"><span class="bg-error-container text-on-error-container px-2 py-1 rounded-full text-xs">Stok Menipis</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<!-- Pesanan Terbaru -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md shadow-sm">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-md text-headline-md font-semibold text-primary">Pesanan Terbaru</h2>
+<a class="font-button text-button text-tertiary hover:underline" href="#">Lihat Semua</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant font-label-md text-label-md text-primary uppercase bg-surface-container-low">
+<th class="p-3 font-medium">Order ID</th>
+<th class="p-3 font-medium">Pelanggan</th>
+<th class="p-3 font-medium">Tanggal</th>
+<th class="p-3 font-medium text-right">Total</th>
+<th class="p-3 font-medium text-center">Status</th>
+</tr>
+</thead>
+<tbody class="font-body-sm text-body-sm text-on-surface">
+<tr class="border-b border-surface-variant hover:bg-surface-bright transition-colors h-12">
+<td class="p-3 font-medium">#ORD-0921</td>
+<td class="p-3 text-on-surface-variant">Budi Santoso</td>
+<td class="p-3 text-on-surface-variant">24 Okt 2023</td>
+<td class="p-3 text-right font-medium">Rp 130.000</td>
+<td class="p-3 text-center"><span class="bg-secondary-fixed text-on-secondary-fixed px-2 py-1 rounded-full text-xs">Perlu Diproses</span></td>
+</tr>
+<tr class="border-b border-surface-variant hover:bg-surface-bright transition-colors h-12 bg-[#F9F9F9]">
+<td class="p-3 font-medium">#ORD-0920</td>
+<td class="p-3 text-on-surface-variant">Siti Aminah</td>
+<td class="p-3 text-on-surface-variant">23 Okt 2023</td>
+<td class="p-3 text-right font-medium">Rp 45.000</td>
+<td class="p-3 text-center"><span class="bg-surface-variant text-on-surface-variant px-2 py-1 rounded-full text-xs">Dikirim</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+<!-- Right Column (Profil Bisnis) -->
+<div class="xl:col-span-3">
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md shadow-sm sticky top-24">
+<div class="flex flex-col items-center text-center mb-stack-md">
+<div class="w-20 h-20 bg-surface-container rounded-full mb-3 flex items-center justify-center overflow-hidden border-2 border-primary-fixed">
+<img class="w-full h-full object-cover" data-alt="A stylized, modern flat illustration icon of a minimalist retail store front or market stall, using a sophisticated color palette of navy blue and soft gold. Clean lines, white background, suitable for a professional university business dashboard." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAX2dRZd6UMKHVTRH0JO0IoigOlBSf-FOqczuG9KwLEI2wskGKnp-6Csp-3wA3ZDk7YuWFYz-KKYrmD-8DTZBxKoxq18dTh_arbwGTqnkYQZdnz0EtELCel_XJhYjsY58_IBttjj0TEMMHP6xg9_mVdjiHAlH3zuczLHWBAaMbXuFjkbDsHENRU1r6TC8NV7f7QECgiQr4XNU6dERYRuUPdweu_irSeYLFlLsspVta8RmUpYMWuPWJ0HQ">
+</div>
+<h3 class="font-headline-md text-headline-md font-semibold text-primary">Koperasi Mahasiswa FEB</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Retail &amp; Merchandise</p>
+<div class="mt-4 flex items-center gap-1 bg-surface-bright border border-outline-variant px-3 py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px] text-tertiary" data-weight="fill">verified</span>
+<span class="font-label-md text-label-md text-tertiary">Terverifikasi</span>
+</div>
+</div>
+<div class="space-y-4 pt-4 border-t border-outline-variant">
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase mb-1">Status Operasional</p>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-[#4CAF50]"></div>
+<span class="font-body-sm text-body-sm font-medium">Aktif Menerima Pesanan</span>
+</div>
+</div>
+<div>
+<p class="font-label-md text-label-md text-on-surface-variant uppercase mb-1">Total Pendapatan (Bulan Ini)</p>
+<p class="font-body-lg text-body-lg font-semibold text-primary">Rp 4.520.000</p>
+</div>
+<button class="w-full bg-transparent border border-primary text-primary font-button text-button py-2 rounded-DEFAULT hover:bg-surface-container transition-colors mt-2">
+                                Edit Profil Bisnis
+                            </button>
+</div>
+</section>
+</div>
+</div>
+</main>
+</div>
+</body></html>

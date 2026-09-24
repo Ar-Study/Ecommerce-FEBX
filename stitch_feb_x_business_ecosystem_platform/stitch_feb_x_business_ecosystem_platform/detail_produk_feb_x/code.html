@@ -1,0 +1,327 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Detail Produk - FEB-X</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#454652",
+                        "on-error-container": "#93000a",
+                        "secondary": "#785900",
+                        "primary-fixed": "#e0e0ff",
+                        "surface-bright": "#f9f9f9",
+                        "on-error": "#ffffff",
+                        "error": "#ba1a1a",
+                        "surface": "#f9f9f9",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "error-container": "#ffdad6",
+                        "inverse-primary": "#bdc2ff",
+                        "surface-variant": "#e2e2e2",
+                        "primary-container": "#1a237e",
+                        "on-tertiary-fixed-variant": "#293ca0",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#000f5b",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "secondary-fixed": "#ffdf9e",
+                        "on-secondary-container": "#6c5000",
+                        "on-primary-fixed": "#000767",
+                        "on-primary-fixed-variant": "#343d96",
+                        "outline-variant": "#c6c5d4",
+                        "surface-tint": "#4c56af",
+                        "tertiary-container": "#072189",
+                        "surface-container-low": "#f3f3f3",
+                        "tertiary-fixed-dim": "#bac3ff",
+                        "secondary-container": "#fdc003",
+                        "on-background": "#1a1c1c",
+                        "background": "#f9f9f9",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-secondary-fixed": "#261a00",
+                        "tertiary-fixed": "#dee0ff",
+                        "on-primary-container": "#8690ee",
+                        "on-primary": "#ffffff",
+                        "outline": "#767683",
+                        "primary": "#000666",
+                        "on-tertiary-fixed": "#00105c",
+                        "surface-dim": "#dadada",
+                        "surface-container-high": "#e8e8e8",
+                        "on-surface": "#1a1c1c",
+                        "surface-container": "#eeeeee",
+                        "surface-container-highest": "#e2e2e2",
+                        "inverse-surface": "#2f3131",
+                        "on-tertiary-container": "#7e90f8",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-fixed-dim": "#fabd00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "stack-sm": "8px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "container-max": "1440px",
+                        "unit": "4px",
+                        "stack-md": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "headline-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "button": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.filled {
+            font-variation-settings: 'FILL' 1;
+        }
+        body {
+            background-color: theme('colors.background');
+            color: theme('colors.on-background');
+        }
+    </style>
+</head>
+<body class="antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-16 sticky top-0 z-50">
+<div class="flex items-center gap-gutter">
+<span class="font-headline-md text-headline-md font-bold text-primary">FEB-X</span>
+<div class="hidden md:flex gap-gutter items-center ml-stack-lg">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-secondary pb-1" href="#">Marketplace</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-surface-container transition-colors rounded px-2 py-1" href="#">Dashboard</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:bg-surface-container transition-colors rounded px-2 py-1" href="#">Evaluasi</a>
+</div>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all w-64" placeholder="Search..." type="text">
+</div>
+<div class="flex gap-stack-sm items-center">
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors cursor-pointer active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:bg-surface-container rounded-full transition-colors cursor-pointer active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="ml-stack-md px-4 py-2 bg-primary text-on-primary font-button text-button rounded-lg hover:bg-primary/90 transition-colors cursor-pointer active:opacity-80 transition-opacity hidden sm:block">SSO Login</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-stack-lg">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex text-body-sm font-body-sm text-on-surface-variant mb-stack-lg">
+<ol class="inline-flex items-center space-x-2">
+<li class="inline-flex items-center">
+<a class="hover:text-primary transition-colors" href="#">Beranda</a>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Marketplace</a>
+</div>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<a class="hover:text-primary transition-colors" href="#">Minuman</a>
+</div>
+</li>
+<li aria-current="page">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<span class="text-on-background font-medium">Kopi Mahasiswa Premium</span>
+</div>
+</li>
+</ol>
+</nav>
+<!-- Product Section (Bento Grid Style) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter mb-stack-lg">
+<!-- Gallery (Left 7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-stack-md">
+<div class="w-full aspect-[4/3] bg-surface-container-highest rounded-xl overflow-hidden relative border border-outline-variant/30">
+<img class="w-full h-full object-cover" data-alt="A high-quality, professional photograph of a premium iced coffee drink in a clear glass cup, resting on a clean, modern white wooden table. The lighting is bright and natural, highlighting the rich dark brown layers of espresso swirling into creamy milk. The background is slightly blurred, showing a modern cafe interior with subtle gold accents, aligning with a premium corporate aesthetic. The overall mood is refreshing, energetic, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl6douwFwpqASfbYH_JweRR14hBdOeA4_G3Vrknqh4Aucm1r1g_cQGaSf1ufLQr5SpspBG45BHJSsJsQRpLF7BidWhhYMUdHvfQKRVJhOHhE0hnqvtHKv7Ip7JR1IInSexGD3snl_T6p65b2fdzIYTUPyT3M37WhI1UYXllO8wm8sJ2mfBVSBO-qMgIg-R8YMQdqf2hkLZETWuYQLJIsPpsxROBk7Rl-uuYljoQjsSj7dY2hPi5URYow">
+</div>
+<div class="grid grid-cols-4 gap-stack-md">
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden border-2 border-primary cursor-pointer">
+<img class="w-full h-full object-cover" data-alt="A close-up shot of the premium iced coffee from above, showing the crema and ice cubes. Clean, bright, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4eKdP7RqN5X6SMcj5-aTVtTzKUOhHiQzq2I0_kA4-5lC-UCiiIHK5zIzVLpbMvbVRcycl33Y0CNvICq9NBq0_tFoU_55aPg1L6SvO4BviZEjm4qA4m2SN05vnQM8b6BsZYEOjodujOrNlwEBvBUNxsfYK_IgmRlKKXNvXLmiq8Tpr4SlfMdMuCFhPvnlar4Np24UTChAYpoknor_NqcCHVaos8GVw-8VtMSx-brnkEk_jYvDWlCfcpA">
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden border border-outline-variant cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="The premium iced coffee drink placed next to an open laptop and a notebook on a clean white desk. Corporate, modern, productive vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLwQXcr6zcCHMivtozuzf6J1vOagKGDVv4jWDtbCp0r_8AAA5gKByDcXGoImo9VTSkV2m1ObCA69kUjv2eevixghV2WQZJ_3hCpueYi-DjzUEChMQPSs20JRhBru_EKKVr97IVoWksLMneFFIIi2fNSVy_7XI-3ZVPawPoynB61HqlV90qAIaiGxgBl05OXLc2IWbhvsOc9PFdaUu3ts-Sz96nGslOypDe-sePyq35opttlUOt5Y_WAg">
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-lg overflow-hidden border border-outline-variant cursor-pointer opacity-70 hover:opacity-100 transition-opacity">
+<img class="w-full h-full object-cover" data-alt="A shot focusing on the high-quality coffee beans used for the premium coffee, scattered elegantly on a sleek white marble surface with warm lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvTYuHM7oWJJXWEMYEHFAPoVsSgHgeLaU6sZdYtzH-7bZEnEVbWpMViXdMJexAgwa4Bk_ZjZ7HKbrIS43Z87LA3dpKPVbhY2PNVeVZ3xVsNem7tC3hWK8ZxQs09HP8h-q2loBzI6nIa9gE3kwe_AleBtC-M6qk0iDpx253v4BxFj8kDJDf5T-rqvnjoqCIkfnWqjhLsX0lOeT7ZMz9jns7hhe76_cGKoKmvzRRUHVBczYhPuvAXn6WeQ">
+</div>
+<div class="aspect-square bg-surface-container-highest rounded-lg flex items-center justify-center border border-outline-variant cursor-pointer hover:bg-surface-container transition-colors">
+<span class="font-body-md text-on-surface-variant">+3</span>
+</div>
+</div>
+</div>
+<!-- Product Details (Right 5 cols) -->
+<div class="lg:col-span-5 flex flex-col">
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-stack-lg h-full flex flex-col">
+<div class="mb-stack-md">
+<h1 class="font-headline-lg md:font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-unit">Kopi Mahasiswa Premium</h1>
+<div class="flex items-center gap-2 mb-stack-sm">
+<div class="flex text-secondary-container">
+<span class="material-symbols-outlined filled text-[20px]">star</span>
+<span class="material-symbols-outlined filled text-[20px]">star</span>
+<span class="material-symbols-outlined filled text-[20px]">star</span>
+<span class="material-symbols-outlined filled text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star_half</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4.8 (124 Ulasan)</span>
+<span class="text-outline-variant mx-1">•</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Terjual 500+</span>
+</div>
+</div>
+<div class="mb-stack-lg">
+<p class="font-display-lg text-display-lg text-on-background font-bold">Rp 25.000</p>
+<p class="font-body-sm text-body-sm text-on-error-container bg-error-container inline-block px-2 py-1 rounded mt-unit">Diskon Khusus Mahasiswa 10%</p>
+</div>
+<div class="mb-stack-lg flex-grow">
+<h3 class="font-headline-md text-headline-md text-on-background mb-stack-sm">Deskripsi</h3>
+<p class="font-body-md text-body-md text-on-surface-variant line-clamp-4">
+                            Rasakan energi ekstra untuk menemani sesi belajar panjang atau rapat proyek Anda. Kopi Mahasiswa Premium diracik dari 100% biji kopi Arabika pilihan, diseduh dingin selama 12 jam untuk menghasilkan rasa yang halus, asam rendah, dan aroma yang kuat. Cocok untuk Anda yang membutuhkan fokus tinggi dengan sentuhan kemewahan dalam setiap tegukan.
+                        </p>
+</div>
+<hr class="border-outline-variant mb-stack-lg">
+<!-- Business Profile -->
+<div class="flex items-center gap-stack-md mb-stack-lg p-stack-md bg-surface-container-low rounded-lg border border-outline-variant/50">
+<div class="w-12 h-12 rounded-full bg-surface-container-highest overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist logo for a student-run cafe business named 'Bisnis Mandiri Jaya'. The logo features geometric coffee bean shapes in deep navy and vibrant gold on a crisp white background. Modern, corporate, and trustworthy." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmZLLT-nB_mrpG-_L49YFrBhbYUTQSW5szNqaFJvZwFU5FU_mmxtQMKWuz0ZYB129vK0TTZUlkxoErUDnx5MAaP5BnXf9SMfpEWgGNMqT1p3Xw-Dts6naj6jTdV48Hmltg9z6pxmKFzK3925JVKnhaVQm56ESDPWuESazajUJyTxsryAlnXQGWevMyZ-ameX3Asu8Z8K6-Ia7fDxvTIEkuqbvPjtGsS6WFNWY4_mg_nrDcFCJ4Rvt00w">
+</div>
+<div class="flex-grow">
+<p class="font-button text-button text-on-background">Bisnis Mandiri Jaya</p>
+<p class="font-label-md text-label-md text-on-surface-variant flex items-center">
+<span class="material-symbols-outlined text-[14px] mr-1">verified</span>
+                                Inkubator Bisnis FEB
+                            </p>
+</div>
+<button class="px-4 py-2 border border-primary text-primary font-button text-button rounded-lg hover:bg-surface-container transition-colors">Kunjungi</button>
+</div>
+<!-- Actions -->
+<div class="flex flex-col sm:flex-row gap-stack-md mt-auto">
+<div class="flex items-center border border-outline-variant rounded-lg overflow-hidden h-12 w-full sm:w-32 flex-shrink-0">
+<button class="w-10 h-full flex items-center justify-center bg-surface-container-low hover:bg-surface-container text-on-background transition-colors">
+<span class="material-symbols-outlined text-[18px]">remove</span>
+</button>
+<input class="w-full h-full text-center border-none focus:ring-0 font-body-md text-on-background bg-surface-container-lowest p-0" type="text" value="1">
+<button class="w-10 h-full flex items-center justify-center bg-surface-container-low hover:bg-surface-container text-on-background transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+<button class="flex-grow h-12 bg-primary text-on-primary font-button text-button rounded-lg hover:bg-primary/90 transition-colors flex items-center justify-center gap-2 ring-2 ring-transparent focus:ring-secondary focus:ring-offset-2">
+<span class="material-symbols-outlined">add_shopping_cart</span>
+                            Tambah ke Keranjang
+                        </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Similar Products Section -->
+<div class="mt-stack-lg pt-stack-lg border-t border-outline-variant">
+<div class="flex justify-between items-center mb-stack-md">
+<h2 class="font-headline-lg text-headline-lg text-on-background">Produk Serupa</h2>
+<a class="font-button text-button text-primary flex items-center hover:underline" href="#">
+                    Lihat Semua
+                    <span class="material-symbols-outlined text-[18px] ml-1">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow group">
+<div class="aspect-square bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A professional product shot of a matcha latte in a clear tall glass, placed on a modern white desk. High key lighting, clean corporate aesthetic, deep navy and green accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuANH22O2hxSHGDuORr5lxVsPQGA9UULXTdvrncUl3VhTb4gUn_LysMIXT5nJsmd5fHjIgHRTIH8L7W_9Ldx8F4RVRX66RzFpy_nxkujU6-WxQcPUt9pGQIDQOze6QLimQq7sYdfU91LFdGsIEFX_7W1CWzivnVMeODkqwPRCI2hg903B5bXl255kF5bu3ls_HB4NmRl2ni8EsWIEatfuG0CY9i5XXD3FHJNRrCa5POAaIl8OKlIyCSO_g">
+</div>
+<div class="p-stack-md flex flex-col gap-unit">
+<h3 class="font-body-md text-body-md font-semibold text-on-background truncate">Matcha Latte Focus</h3>
+<p class="font-body-md text-body-md text-primary font-bold">Rp 28.000</p>
+<div class="flex items-center text-label-md font-label-md text-on-surface-variant mt-2">
+<span class="material-symbols-outlined filled text-[14px] text-secondary-container mr-1">star</span>
+                            4.9 | Terjual 300+
+                        </div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow group">
+<div class="aspect-square bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A clean, appetizing shot of a modern artisan sandwich on a minimalist ceramic plate. Professional lighting, white background context, evoking a premium cafe lunch option for students." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKcmoRQMcbHwognJORm-Ugt3meorPmFnWSCkX8WF7MQkipFjSWmZWuGHQxQUNs_hj6ZpXFovRI5hktte5Jcy0vxkRUEDnbqnO9YXINbFAx-_VJzM1nU66A1lMhXnYb-_auQr2CQ4cMc5CNkK9js5XOqRJPA4fSPvfJIcEhzbVUvfvKr8QWCfN8b-1cHibt-Wnv9F1GZRcK7BEKMBv21gFcON_eSBg745kbkrJ84bFcvti6PgcKexE72g">
+<div class="absolute top-2 left-2 bg-secondary text-on-secondary font-label-md text-[10px] px-2 py-1 rounded">TERLARIS</div>
+</div>
+<div class="p-stack-md flex flex-col gap-unit">
+<h3 class="font-body-md text-body-md font-semibold text-on-background truncate">Sandwich Ayam Panggang</h3>
+<p class="font-body-md text-body-md text-primary font-bold">Rp 35.000</p>
+<div class="flex items-center text-label-md font-label-md text-on-surface-variant mt-2">
+<span class="material-symbols-outlined filled text-[14px] text-secondary-container mr-1">star</span>
+                            4.7 | Terjual 850+
+                        </div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow group">
+<div class="aspect-square bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A sleek, branded reusable tumbler in deep navy blue, standing on a bright white surface. High contrast, professional product photography with subtle reflections, suitable for a corporate campus store." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6GOXRWVs_unKCnV2Of_bCrafjke_MrWXEWgDF92q_ORmmA6X_YoFzCtbsORpVohcaehfyA0EuDeNgQJq6ppCkU1RJWOUO73THb3__tzCPH837UwZt03TKaGB1cCgd82hzmYOgj9LIt_t33dDRArZjZAWcJYMw3GRTZicbieGBo96MLwUufOQddlbQTiYEwrAwDKY8yHQ9Bd_ptqpNIZW3T-0wrzLwNc_1yO0N6K1KbOHnmn7puyjshw">
+</div>
+<div class="p-stack-md flex flex-col gap-unit">
+<h3 class="font-body-md text-body-md font-semibold text-on-background truncate">Tumbler FEB-X Navy</h3>
+<p class="font-body-md text-body-md text-primary font-bold">Rp 85.000</p>
+<div class="flex items-center text-label-md font-label-md text-on-surface-variant mt-2">
+<span class="material-symbols-outlined filled text-[14px] text-secondary-container mr-1">star</span>
+                            5.0 | Terjual 120+
+                        </div>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden hover:shadow-md transition-shadow group">
+<div class="aspect-square bg-surface-container-high relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A professional photograph of a cold brew coffee bottle with a minimalist label, sitting on crushed ice. Clean, crisp lighting, modern and refreshing aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAE94TIwtqt0IOAL_KwwqG0yMWpsB7hF1J0SgoSt9B9R85g24oiCBB5NMTqU5VyJVBGZ9pK1RytqeIM8_IieOYTOGbtzqEIDzLrMK7BXh--p79UjrGGOgsqpy87bRx_idE4xeECZ8S1906kYBZdJTE_ZXkv9qotpxVxV7B37hlEU5W5mFJZY6O3z4naIizH2ssr_9AnNI8Q7qj2CKHD9K7V6a7nrjzg0aF3jvkADhQWhuXLxYkDYhoyVA">
+</div>
+<div class="p-stack-md flex flex-col gap-unit">
+<h3 class="font-body-md text-body-md font-semibold text-on-background truncate">Cold Brew Botolan</h3>
+<p class="font-body-md text-body-md text-primary font-bold">Rp 30.000</p>
+<div class="flex items-center text-label-md font-label-md text-on-surface-variant mt-2">
+<span class="material-symbols-outlined filled text-[14px] text-secondary-container mr-1">star</span>
+                            4.6 | Terjual 400+
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

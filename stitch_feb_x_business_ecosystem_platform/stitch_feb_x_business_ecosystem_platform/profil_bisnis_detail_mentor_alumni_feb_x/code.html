@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Business Profile - FEB-X Mentor Portal</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "tertiary-fixed": "#dee0ff",
+                      "on-error": "#ffffff",
+                      "tertiary": "#000f5b",
+                      "on-primary-fixed": "#000767",
+                      "secondary": "#785900",
+                      "outline": "#767683",
+                      "primary-container": "#1a237e",
+                      "on-primary-container": "#8690ee",
+                      "background": "#f9f9f9",
+                      "primary": "#000666",
+                      "secondary-fixed": "#ffdf9e",
+                      "tertiary-container": "#072189",
+                      "tertiary-fixed-dim": "#bac3ff",
+                      "inverse-on-surface": "#f1f1f1",
+                      "outline-variant": "#c6c5d4",
+                      "on-surface-variant": "#454652",
+                      "on-tertiary": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "on-error-container": "#93000a",
+                      "surface-container-lowest": "#ffffff",
+                      "primary-fixed": "#e0e0ff",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-secondary-fixed": "#261a00",
+                      "secondary-container": "#fdc003",
+                      "inverse-primary": "#bdc2ff",
+                      "error": "#ba1a1a",
+                      "surface-container-high": "#e8e8e8",
+                      "on-secondary-fixed-variant": "#5b4300",
+                      "surface-container": "#eeeeee",
+                      "surface-tint": "#4c56af",
+                      "inverse-surface": "#2f3131",
+                      "on-tertiary-fixed-variant": "#293ca0",
+                      "on-tertiary-container": "#7e90f8",
+                      "on-tertiary-fixed": "#00105c",
+                      "surface-variant": "#e2e2e2",
+                      "on-background": "#1a1c1c",
+                      "on-secondary-container": "#6c5000",
+                      "surface": "#f9f9f9",
+                      "on-primary-fixed-variant": "#343d96",
+                      "surface-container-low": "#f3f3f3",
+                      "secondary-fixed-dim": "#fabd00",
+                      "surface-bright": "#f9f9f9",
+                      "on-surface": "#1a1c1c",
+                      "primary-fixed-dim": "#bdc2ff",
+                      "on-primary": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "40px",
+                      "unit": "4px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "container-max": "1440px",
+                      "stack-sm": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "label-md": [
+                              "JetBrains Mono"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "button": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .ambient-shadow { box-shadow: 0 4px 16px 0 rgba(0, 6, 102, 0.04); }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container-low dark:bg-surface-dim text-primary dark:text-primary-fixed border-r border-outline-variant dark:border-outline p-stack-md gap-stack-sm z-40">
+<div class="mb-stack-lg">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">account_balance</span>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold leading-tight">Mentor Portal</h1>
+<p class="font-label-md text-label-md text-on-surface-variant">Empowered Intelligence</p>
+</div>
+</div>
+</div>
+<ul class="flex-1 flex flex-col gap-unit">
+<li>
+<a class="flex items-center gap-3 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Summary
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">business_center</span>
+                    Guided Businesses
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">rate_review</span>
+                    Feedback
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">handshake</span>
+                    Collaboration
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 font-label-md text-label-md bg-secondary-container text-on-secondary-container rounded-lg font-bold hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">account_circle</span>
+                    Business Profiles
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-lg hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors active:scale-95 transition-transform duration-150" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+</li>
+</ul>
+<div class="mt-auto">
+<button class="w-full mb-stack-md py-2 px-4 bg-primary text-on-primary font-button text-button rounded-lg hover:bg-primary-container transition-colors shadow-sm focus:ring-2 focus:ring-secondary-container focus:outline-none">
+                Provide Feedback
+            </button>
+<ul class="flex flex-col gap-unit">
+<li>
+<a class="flex items-center gap-3 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+                        Support
+                    </a>
+</li>
+<li>
+<a class="flex items-center gap-3 p-3 font-label-md text-label-md text-on-surface-variant hover:bg-surface-container-high rounded-lg transition-colors" href="#">
+<span class="material-symbols-outlined">logout</span>
+                        Logout
+                    </a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface-container border-b border-outline-variant dark:border-outline flex justify-between items-center w-full px-margin-desktop h-16 sticky top-0 z-50">
+<div class="flex items-center gap-gutter">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">FEB-X</span>
+<nav class="hidden lg:flex gap-stack-md">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#">Directory</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#">Resources</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors py-1" href="#">Reports</a>
+</nav>
+</div>
+<div class="flex items-center gap-stack-md">
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-full text-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all w-64" placeholder="Search..." type="text"/>
+</div>
+<button class="p-2 text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high rounded-full transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-primary dark:text-primary-fixed hover:bg-surface-container-low dark:hover:bg-surface-container-high rounded-full transition-all duration-200 ease-in-out">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant ml-2">
+<img alt="Mentor profile avatar" class="w-full h-full object-cover" data-alt="A professional headshot of a business mentor in a modern corporate setting, smiling confidently, well-lit, shallow depth of field, high-resolution portrait." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoYUXZdlCYAMy8Dzv5DIy0fWSgHpFr4N5_8EXf84eUWsviWNPfIDXjCiRmWGIEm3G9wssi-at_zHtZtw6S53fNIw7DQ4TP2Hc7za-GU8lk0VDIDwNVfo11y9GmAy8N6pecxZak81cVHabHkBv--O78chICf-owhC8UhUUQrcitH4-5qlid60Hkcdp--aLfn_aBkyXDrCQ6iee3utBTyXM_L-tTbRSG1fkLr6EWb0iJbPBs2hMicS6mjg"/>
+</div>
+</div>
+</header>
+<div class="p-margin-mobile md:p-margin-desktop max-w-[container-max] mx-auto w-full flex-1">
+<div class="flex flex-col lg:flex-row gap-gutter">
+<!-- Left Column (Main Info) -->
+<div class="flex-1 flex flex-col gap-stack-lg">
+<!-- Business Identity Header -->
+<section class="bg-surface border border-outline-variant rounded-xl p-stack-lg ambient-shadow relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-2 bg-secondary-container"></div>
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-stack-lg">
+<div class="w-24 h-24 rounded-lg border border-outline-variant bg-surface-container-lowest p-2 flex-shrink-0">
+<img alt="AgriGrow Tech Logo" class="w-full h-full object-contain" data-alt="A modern, abstract logo design for an agricultural technology company called AgriGrow Tech. It features a stylized green leaf intersecting with a geometric blue data node, representing the fusion of nature and technology. Clean, flat design style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTnUdl0F1VRxpb0KCRU4BIfiyDnIkqfL9vDxmSpkRFHySIxUyEchhaKh_5nHHvJWvB947vllBBxkk6MD1ibRmKDNi-MkZ1tcBekhwr6c2Z40NwFK9QRcZnKT3m9oVY-sInrrl91-sL4AM55SLCvrDmkmQvIQoRuXZGm_Tanc5AxasXJTUfdCqyfljSK1sXT8VFdsVpK3IzrRqQ16_DFuYujpvaS3gUFm2q-UY-F2R0_Fon3rFv7xKJJg"/>
+</div>
+<div class="flex-1">
+<div class="flex flex-wrap items-center gap-3 mb-2">
+<h2 class="font-headline-lg text-headline-lg text-primary m-0">AgriGrow Tech</h2>
+<span class="px-3 py-1 bg-tertiary-fixed text-on-tertiary-fixed font-label-md text-label-md rounded-full border border-tertiary-fixed-dim">Agrotech</span>
+<span class="px-3 py-1 bg-secondary-fixed text-on-secondary-fixed font-label-md text-label-md rounded-full border border-secondary-fixed-dim">Scaling Stage</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mt-4">
+                                    "Empowering local farmers through data-driven insights and sustainable supply chain management to maximize yield and market reach."
+                                </p>
+</div>
+</div>
+</section>
+<!-- Performance Dashboard -->
+<section class="grid grid-cols-1 sm:grid-cols-3 gap-stack-md">
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md ambient-shadow flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant mb-2 uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">monitoring</span> Total Sales (YTD)
+                            </span>
+<span class="font-display-lg text-display-lg text-primary">Rp 150M</span>
+<div class="mt-2 text-body-sm text-[#006b5b] flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span> +24% vs last quarter
+                            </div>
+</div>
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md ambient-shadow flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant mb-2 uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">groups</span> Customer Count
+                            </span>
+<span class="font-display-lg text-display-lg text-primary">1.2k</span>
+<div class="mt-2 text-body-sm text-[#006b5b] flex items-center gap-1 font-medium">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12% vs last quarter
+                            </div>
+</div>
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md ambient-shadow flex flex-col">
+<span class="font-label-md text-label-md text-on-surface-variant mb-2 uppercase flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">star</span> Average Rating
+                            </span>
+<span class="font-display-lg text-display-lg text-secondary-container">4.9<span class="text-headline-md text-outline-variant">/5.0</span></span>
+<div class="mt-2 text-body-sm text-on-surface-variant flex items-center gap-1">
+                                Based on 342 reviews
+                            </div>
+</div>
+</section>
+<!-- Business Model Canvas (Simplified Bento Grid) -->
+<section class="bg-surface border border-outline-variant rounded-xl p-stack-lg ambient-shadow">
+<h3 class="font-headline-md text-headline-md text-primary mb-stack-md border-b border-outline-variant pb-2">Business Model Highlights</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-md">
+<div class="bg-surface-container-low p-stack-md rounded-lg border border-outline-variant">
+<h4 class="font-label-md text-label-md text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">diamond</span> Value Propositions
+                                </h4>
+<ul class="font-body-sm text-body-sm text-on-surface-variant list-disc pl-5 space-y-1">
+<li>Predictive yield analytics for smallholder farmers.</li>
+<li>Direct-to-market platform eliminating middlemen.</li>
+<li>Sustainable farming protocol certification.</li>
+</ul>
+</div>
+<div class="bg-surface-container-low p-stack-md rounded-lg border border-outline-variant">
+<h4 class="font-label-md text-label-md text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">target</span> Customer Segments
+                                </h4>
+<ul class="font-body-sm text-body-sm text-on-surface-variant list-disc pl-5 space-y-1">
+<li>Tier 2 and Tier 3 regional farmers (B2B).</li>
+<li>Urban organic produce retailers (B2B2C).</li>
+<li>Agricultural cooperatives.</li>
+</ul>
+</div>
+<div class="bg-surface-container-low p-stack-md rounded-lg border border-outline-variant md:col-span-2">
+<h4 class="font-label-md text-label-md text-primary mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">payments</span> Revenue Streams
+                                </h4>
+<div class="flex flex-wrap gap-4 mt-3">
+<div class="flex items-center gap-2 bg-surface px-3 py-2 rounded border border-outline-variant">
+<span class="w-3 h-3 rounded-full bg-primary"></span>
+<span class="font-body-sm text-body-sm">SaaS Subscription (45%)</span>
+</div>
+<div class="flex items-center gap-2 bg-surface px-3 py-2 rounded border border-outline-variant">
+<span class="w-3 h-3 rounded-full bg-secondary-container"></span>
+<span class="font-body-sm text-body-sm">Marketplace Commission (40%)</span>
+</div>
+<div class="flex items-center gap-2 bg-surface px-3 py-2 rounded border border-outline-variant">
+<span class="w-3 h-3 rounded-full bg-tertiary"></span>
+<span class="font-body-sm text-body-sm">Data Consulting (15%)</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Product Catalog Preview -->
+<section class="bg-surface border border-outline-variant rounded-xl p-stack-lg ambient-shadow">
+<div class="flex justify-between items-center mb-stack-md border-b border-outline-variant pb-2">
+<h3 class="font-headline-md text-headline-md text-primary">Featured Products</h3>
+<a class="font-button text-button text-primary hover:underline flex items-center gap-1" href="#">View All <span class="material-symbols-outlined text-sm">arrow_forward</span></a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-stack-md">
+<!-- Product Card 1 -->
+<div class="group border border-outline-variant rounded-lg overflow-hidden hover:border-primary transition-colors bg-surface-container-lowest">
+<div class="h-40 bg-surface-container-low overflow-hidden">
+<img alt="Soil Sensor Pro" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A sleek, modern sensor device planted in dark, rich soil, surrounded by small green sprouts. The device has a subtle digital display showing moisture levels. High-tech agricultural setting, bright natural light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrp_G4vyGyVUawUP7VXgkfF19DEaRQ_jUb3ZqE0FrNIKjZWX1XEVwWCs2SqT64pXCY4r6zI7z67UOwtmdVQfMJH3zdXuKKNkCaGoBzV9Eh7an4QVZ7uFWgIl0tDdHI1i4idl0OD8nMsJwM3CFs2-9t8kuBBBbTfhkyPwjTLq5xYvSeW4nWgyzacyBLPkckYi3rbDuQyj-ltFrIFjxsw4xwITn1yDlwzqhI1kHRC8SGF5z5-AM7ArKHWA"/>
+</div>
+<div class="p-4">
+<h4 class="font-body-md text-body-md font-semibold text-on-surface mb-1">Soil Sensor Pro v2</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-3">IoT connected sensor for real-time moisture and NPK monitoring.</p>
+<div class="font-label-md text-label-md text-primary font-bold">Rp 1.200.000 / unit</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group border border-outline-variant rounded-lg overflow-hidden hover:border-primary transition-colors bg-surface-container-lowest">
+<div class="h-40 bg-surface-container-low overflow-hidden">
+<img alt="AgriGrow Analytics Dashboard" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A software dashboard displayed on a tablet screen, showing various charts, graphs, and a map of a farm layout. The interface is clean, dark mode, with vibrant green and gold accents. Tablet is held by a person in a field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTSSmRq1Y67BFa33i6Is9H89gDF2z0yFkwZtNDqRU7FWeUy8MsiUtdWa1hbMQ3o_jAokZb--8d_MTT4h_TlENs0PDeMEyKDT44hPyyTyYkt5o_Jrcr8eedVOQyYpZ54oCOjeC9hkETazST6SoSdYsyoL8MfEL_WivNCWKPA2uhvQARvdA5n_vXEeqnDMy6Vrd1DSf_C8UoQhAejUMKJbM25cMgJ8Ju5icK7UIxpXb125NSh9jVgki-Iw"/>
+</div>
+<div class="p-4">
+<h4 class="font-body-md text-body-md font-semibold text-on-surface mb-1">AgriGrow Analytics OS</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-3">Cloud-based dashboard for yield prediction and resource management.</p>
+<div class="font-label-md text-label-md text-primary font-bold">Rp 450.000 / mo</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group border border-outline-variant rounded-lg overflow-hidden hover:border-primary transition-colors bg-surface-container-lowest">
+<div class="h-40 bg-surface-container-low overflow-hidden">
+<img alt="Smart Irrigation Kit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A pristine, automated greenhouse irrigation system in operation. Water droplets are caught mid-air, illuminated by bright, clean sunlight filtering through the glass roof. Modern, efficient, sustainable farming." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1koEhMfPkUNQyJ6yVZ_jC-ZsIiExl_9AdYx6KMMC9L1_PDIZU83BAAGml93GcPxhWpJJPM-tAZAImJ3J7X44XpFJ15H4fyJOLPmjKs70SU2mq_dCYN0tPl4INaURZGICxvAaIwz3_tjmOmvp4l0o4V3xtXsTrZYLrvrfmELE3lXHZAKJ9OrKK0xxaKJLZxDapjIx0gYS34l7qb1i3H_75SMl6UuqhROJ4Stscwe4gdFBfnBiGPp5w1g"/>
+</div>
+<div class="p-4">
+<h4 class="font-body-md text-body-md font-semibold text-on-surface mb-1">Smart Drip Kit Basic</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2 mb-3">Automated irrigation starter kit suitable for 1-hectare plots.</p>
+<div class="font-label-md text-label-md text-primary font-bold">Rp 3.500.000 / set</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column (Sidebar Actions & Team) -->
+<aside class="w-full lg:w-80 flex flex-col gap-stack-lg">
+<!-- Mentor Actions -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md ambient-shadow sticky top-24">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase mb-4 tracking-wider">Mentor Actions</h3>
+<div class="flex flex-col gap-3">
+<button class="w-full py-3 px-4 bg-primary text-on-primary font-button text-button rounded-lg hover:bg-primary-container transition-colors shadow-sm focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:outline-none flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">edit_note</span>
+                                Berikan Masukan
+                            </button>
+<button class="w-full py-3 px-4 bg-transparent text-primary font-button text-button rounded-lg border border-primary hover:bg-primary hover:text-on-primary transition-colors focus:ring-2 focus:ring-offset-2 focus:ring-primary focus:outline-none flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-sm">handshake</span>
+                                Buka Peluang
+                            </button>
+<button class="w-full py-3 px-4 bg-transparent text-on-surface-variant font-button text-button rounded-lg hover:bg-surface-container-high transition-colors flex items-center justify-center gap-2 mt-2 border border-transparent">
+<span class="material-symbols-outlined text-sm">download</span>
+                                Download Latest Report
+                            </button>
+</div>
+</div>
+<!-- Meet the Team -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md ambient-shadow">
+<h3 class="font-label-md text-label-md text-on-surface-variant uppercase mb-4 tracking-wider border-b border-outline-variant pb-2">Founding Team</h3>
+<div class="flex flex-col gap-4">
+<!-- Team Member 1 -->
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-outline-variant flex-shrink-0">
+<img alt="Budi Santoso" class="w-full h-full object-cover" data-alt="A professional headshot of a young Indonesian male student founder in a smart-casual outfit, smiling slightly. Bright, clean background, modern corporate style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwLiaKrkyf9Xk7hcudTBxUcwHxcya2D7odDdrWtdZuBHZQ_vDWbgZ2of49aIuvfqHvCZ7qjXAFHQ7RBsJLNlHDoKR1ivJeUrCo03hg-zwCsXb5936G-YSMRzUFJ2aY5xBXWeb5Z6Br3ZWcTVYrxq3ci8f6q-SBvhfkgvRgPcA9CiobxpftAgPsIkdwv--jhs95SzbIwYIQbIqF6Olb6D_YKzBNmk5f4pKgAPsUVFz4xMlaFD7cX7gpGQ"/>
+</div>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Budi Santoso</div>
+<div class="font-label-md text-label-md text-primary">Chief Executive Officer</div>
+<div class="font-label-md text-[10px] text-on-surface-variant mt-0.5">NIM: 18029384</div>
+</div>
+</div>
+<!-- Team Member 2 -->
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-outline-variant flex-shrink-0">
+<img alt="Siti Rahma" class="w-full h-full object-cover" data-alt="A professional headshot of a young Indonesian female student founder wearing a neat hijab and a blazer. Confident expression, brightly lit modern academic environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXwntkeF_0dpaaaGjWSMg7PxMZeZ-JqRTSqxcmfJDlNIi_YH7wk40wCkGJnIKHUfyAA4Rh1pRxqT4e91zU_ZkZtlNegbTlMvaLtW3xCrWHDayHC2Kq1bJfHvuulBjK4XlicMfJxPxeTZEcGJgyXdspXDTHQqfMbOEeMbSEsXWzJl1f25teRsc3bdZpW1eO9uBh5zN_iSFPLhkCadIS1BB0HPjGJfgnLu9I_q3AO8MsyDUDhAtl6Sr9wA"/>
+</div>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Siti Rahma</div>
+<div class="font-label-md text-label-md text-primary">Chief Technology Officer</div>
+<div class="font-label-md text-[10px] text-on-surface-variant mt-0.5">NIM: 18029385</div>
+</div>
+</div>
+<!-- Team Member 3 -->
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden border border-outline-variant flex-shrink-0 bg-surface-container-high flex items-center justify-center text-on-surface-variant font-bold">
+                                    AW
+                                </div>
+<div>
+<div class="font-body-sm text-body-sm font-semibold text-on-surface">Andi Wijaya</div>
+<div class="font-label-md text-label-md text-primary">Head of Operations</div>
+<div class="font-label-md text-[10px] text-on-surface-variant mt-0.5">NIM: 18029410</div>
+</div>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</div>
+</main>
+</body></html>

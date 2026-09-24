@@ -1,0 +1,362 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Pengaturan - FEB-X</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed": "#e0e0ff",
+                        "on-secondary-fixed": "#261a00",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#072189",
+                        "on-primary": "#ffffff",
+                        "surface": "#f9f9f9",
+                        "secondary": "#785900",
+                        "outline": "#767683",
+                        "surface-bright": "#f9f9f9",
+                        "tertiary-fixed": "#dee0ff",
+                        "surface-dim": "#dadada",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#bac3ff",
+                        "on-secondary-fixed-variant": "#5b4300",
+                        "outline-variant": "#c6c5d4",
+                        "error": "#ba1a1a",
+                        "on-tertiary-fixed-variant": "#293ca0",
+                        "inverse-surface": "#2f3131",
+                        "inverse-primary": "#bdc2ff",
+                        "primary": "#000666",
+                        "secondary-container": "#fdc003",
+                        "error-container": "#ffdad6",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container": "#eeeeee",
+                        "surface-container-high": "#e8e8e8",
+                        "secondary-fixed": "#ffdf9e",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-primary-fixed-variant": "#343d96",
+                        "surface-container-low": "#f3f3f3",
+                        "on-secondary-container": "#6c5000",
+                        "surface-variant": "#e2e2e2",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "tertiary": "#000f5b",
+                        "surface-tint": "#4c56af",
+                        "on-surface-variant": "#454652",
+                        "primary-container": "#1a237e",
+                        "on-tertiary-fixed": "#00105c",
+                        "on-primary-container": "#8690ee",
+                        "on-primary-fixed": "#000767",
+                        "background": "#f9f9f9",
+                        "on-background": "#1a1c1c",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#7e90f8",
+                        "secondary-fixed-dim": "#fabd00",
+                        "on-error-container": "#93000a",
+                        "on-surface": "#1a1c1c"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "stack-sm": "8px",
+                        "stack-md": "16px",
+                        "margin-mobile": "16px",
+                        "stack-lg": "32px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "button": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "headline-lg": ["Inter"],
+                        "label-md": ["JetBrains Mono"],
+                        "body-md": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "body-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "button": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "32px", "fontWeight": "600" }],
+                        "display-lg": ["48px", { "lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #000666; /* primary */
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #000666; /* primary */
+        }
+        .toggle-checkbox:checked + .toggle-label::before {
+            transform: translateX(100%);
+            background-color: white;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen antialiased flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest dark:bg-surface-dim font-body-md text-body-md flex justify-between items-center w-full px-margin-desktop h-16 sticky top-0 z-50 border-b border-outline-variant dark:border-outline flat no shadows">
+<div class="flex items-center gap-6">
+<span class="font-headline-md text-headline-md font-bold text-primary dark:text-primary-fixed-dim">FEB-X</span>
+<div class="hidden md:flex items-center gap-4 ml-8">
+<!-- Inactive Nav Links -->
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-md cursor-pointer active:opacity-80 transition-opacity" href="#">Marketplace</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-md cursor-pointer active:opacity-80 transition-opacity" href="#">Dashboard</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:bg-surface-container dark:hover:bg-surface-container-high transition-colors px-3 py-2 rounded-md cursor-pointer active:opacity-80 transition-opacity" href="#">Evaluasi</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container p-2 rounded-full transition-colors cursor-pointer active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">shopping_cart</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container p-2 rounded-full transition-colors cursor-pointer active:opacity-80 transition-opacity">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="bg-primary text-on-primary font-button text-button px-4 py-2 rounded hover:opacity-90 transition-opacity ml-2">SSO Login</button>
+<img alt="User profile" class="w-8 h-8 rounded-full ml-4 object-cover border border-outline-variant" data-alt="A professional headshot of a user against a clean, light gray background, suitable for an enterprise financial dashboard. The lighting is soft and corporate." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtZFRTZbaE3KbuOhjMurLtAWTJFC5B1IDDDqmemkM-PEWD0z9-vQeb_fLB1RS3tUogkDaYKMhSmueZi-cymZeCgKLViYtL6_FxE-_DjC3SJfChvt9qHhonagcOn4dB8pC_nkar51EYR8S5mjt2aPGdaqMbH0KkIEINQUqvi4qVzcdhL7U4wEEJe_ow1zQnMLrXpdm-b6dy-y6IdoXrkHPdm32Cx4a3T_zmk01OPCaBgqExOS14ZffNww">
+</div>
+</nav>
+<div class="flex flex-1 overflow-hidden">
+<!-- SideNavBar -->
+<aside class="hidden md:flex bg-surface-container-low dark:bg-surface-container-lowest font-label-md text-label-md fixed left-0 top-16 h-[calc(100vh-64px)] flex-col p-stack-md z-40 border-r border-outline-variant dark:border-outline w-64 flat no shadows overflow-y-auto">
+<div class="mb-stack-lg flex items-center gap-3 mt-4">
+<img alt="University logo" class="w-10 h-10 rounded" data-alt="A minimalist university crest logo featuring deep navy blue and subtle gold accents, designed for a modern academic fintech platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBA6yV4sDPLACreppXb1obckg4djVqhCf2WO70VoUU2lNWrNCB5YK8M2XC94o7PhLpZzBinGcwjF2QcJYgD-GQsv1bqS4JR7y38FNmFFx8Bq6kOEXMk3l16xRN52nYvX8UZUBmwd-QUH4WAkh9vrMAla81CN-PvA7F_ufBbhPLRXJPM4cpiyh62VECT5xSgxBKKmBfJPPKLAwNSuR8NQBBTNYd9Dv1ZCLDLyW1F5Lxhk29syjRiNzlvdQ">
+<div>
+<h2 class="font-headline-md text-headline-md font-bold text-primary text-sm leading-tight">Panel Kontrol</h2>
+<p class="text-on-surface-variant text-xs">FEB-X Ecosystem</p>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Ringkasan
+                </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined">payments</span>
+                    Pendapatan
+                </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined">trending_up</span>
+                    Pertumbuhan
+                </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined">storefront</span>
+                    Data Bisnis
+                </a>
+<a class="flex items-center gap-3 text-on-surface-variant dark:text-on-surface-variant px-4 py-3 hover:bg-surface-variant dark:hover:bg-surface-variant/20 transition-all duration-200 ease-in-out rounded-lg" href="#">
+<span class="material-symbols-outlined">school</span>
+                    Akademik
+                </a>
+<!-- Active Nav Item -->
+<a class="flex items-center gap-3 bg-secondary-container dark:bg-secondary text-on-secondary-container dark:text-on-secondary rounded-lg px-4 py-3 transition-all duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
+                    Pengaturan
+                </a>
+</nav>
+<div class="mt-auto pt-stack-md space-y-2">
+<button class="w-full bg-primary text-on-primary font-button text-button py-2 rounded hover:opacity-90 transition-opacity mb-4">Buka Laporan</button>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-2 hover:bg-surface-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">help</span>
+                    Bantuan
+                </a>
+<a class="flex items-center gap-3 text-on-surface-variant px-4 py-2 hover:bg-surface-variant transition-colors rounded-lg" href="#">
+<span class="material-symbols-outlined">logout</span>
+                    Keluar
+                </a>
+</div>
+</aside>
+<!-- Main Content Canvas -->
+<main class="flex-1 md:ml-64 p-margin-mobile md:p-margin-desktop overflow-y-auto w-full max-w-container-max mx-auto bg-surface">
+<header class="mb-stack-lg border-b border-outline-variant pb-4">
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary">Pengaturan Akun</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Kelola preferensi profil, keamanan, dan notifikasi Anda dalam ekosistem FEB-X.</p>
+</header>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Left Column: Profile & Security (8 cols) -->
+<div class="lg:col-span-8 space-y-stack-lg">
+<!-- Profile Section -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">person</span> Profil Pengguna
+                        </h2>
+<div class="flex flex-col md:flex-row gap-gutter items-start">
+<div class="flex flex-col items-center gap-3 border border-outline-variant p-4 rounded-lg bg-surface-container-low min-w-[150px]">
+<div class="relative w-24 h-24 rounded-full overflow-hidden border-2 border-primary-container bg-surface-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-outline">account_circle</span>
+</div>
+<button class="font-button text-button text-primary border border-primary px-3 py-1 rounded hover:bg-primary-fixed transition-colors text-sm">Ubah Foto</button>
+</div>
+<div class="flex-1 w-full space-y-4">
+<div>
+<label class="block font-body-sm text-body-sm font-medium text-primary mb-1">Nama Lengkap</label>
+<input class="w-full border border-outline-variant rounded px-3 py-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md bg-surface-container-lowest" type="text" value="Dr. Budi Santoso">
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-body-sm text-body-sm font-medium text-primary mb-1">Email Institusi</label>
+<input class="w-full border border-outline-variant rounded px-3 py-2 bg-surface-container text-on-surface-variant cursor-not-allowed font-body-md text-body-md" disabled="" type="email" value="b.santoso@febx.edu">
+</div>
+<div>
+<label class="block font-body-sm text-body-sm font-medium text-primary mb-1">Nomor Telepon</label>
+<input class="w-full border border-outline-variant rounded px-3 py-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary font-body-md text-body-md bg-surface-container-lowest" type="tel" value="+62 812 3456 7890">
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Security Section -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container">security</span> Keamanan
+                        </h2>
+<div class="space-y-6">
+<div class="border-b border-outline-variant pb-6">
+<h3 class="font-button text-button text-on-surface mb-4">Ubah Kata Sandi</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block font-body-sm text-body-sm font-medium text-primary mb-1">Kata Sandi Saat Ini</label>
+<input class="w-full border border-outline-variant rounded px-3 py-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-surface-container-lowest" type="password">
+</div>
+<div class="hidden md:block"></div>
+<div>
+<label class="block font-body-sm text-body-sm font-medium text-primary mb-1">Kata Sandi Baru</label>
+<input class="w-full border border-outline-variant rounded px-3 py-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-surface-container-lowest" type="password">
+</div>
+<div>
+<label class="block font-body-sm text-body-sm font-medium text-primary mb-1">Konfirmasi Kata Sandi Baru</label>
+<input class="w-full border border-outline-variant rounded px-3 py-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary bg-surface-container-lowest" type="password">
+</div>
+</div>
+<button class="mt-4 font-button text-button bg-surface-container-low text-primary border border-outline-variant px-4 py-2 rounded hover:bg-surface-variant transition-colors">Perbarui Kata Sandi</button>
+</div>
+<div class="flex items-center justify-between pt-2">
+<div>
+<h3 class="font-button text-button text-on-surface">Two-Factor Authentication (2FA)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Tambahkan lapisan keamanan ekstra pada akun Anda.</p>
+</div>
+<div class="relative inline-block w-12 mr-2 align-middle select-none transition duration-200 ease-in">
+<input checked="" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer border-primary top-0 left-0 transition-transform duration-200 ease-in-out transform translate-x-full z-10" id="toggle2fa" name="toggle2fa" type="checkbox">
+<label class="toggle-label block overflow-hidden h-6 rounded-full bg-primary cursor-pointer relative before:content-[''] before:absolute before:top-0 before:left-[-100%] before:w-full before:h-full before:bg-surface-container-high before:transition-transform before:duration-200 before:ease-in-out" for="toggle2fa"></label>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Notifications & Integrations (4 cols) -->
+<div class="lg:col-span-4 space-y-stack-lg">
+<!-- Notification Preferences -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md flex items-center gap-2 text-lg">
+<span class="material-symbols-outlined text-secondary-container">notifications_active</span> Notifikasi
+                        </h2>
+<div class="space-y-4">
+<!-- Item 1 -->
+<div class="flex justify-between items-start border-b border-surface-variant pb-3">
+<div class="pr-4">
+<span class="font-button text-button text-on-surface block">Transaksi Baru</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pemberitahuan aktivitas pembayaran.</span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<label class="flex items-center gap-2 text-xs text-on-surface-variant cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"> Email
+                                    </label>
+<label class="flex items-center gap-2 text-xs text-on-surface-variant cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"> Push
+                                    </label>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex justify-between items-start border-b border-surface-variant pb-3">
+<div class="pr-4">
+<span class="font-button text-button text-on-surface block">Validasi Bisnis</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pembaruan status verifikasi UMKM.</span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<label class="flex items-center gap-2 text-xs text-on-surface-variant cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"> Email
+                                    </label>
+<label class="flex items-center gap-2 text-xs text-on-surface-variant cursor-pointer">
+<input class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"> Push
+                                    </label>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="flex justify-between items-start">
+<div class="pr-4">
+<span class="font-button text-button text-on-surface block">Update Akademik</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Informasi kredit dan kurikulum.</span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<label class="flex items-center gap-2 text-xs text-on-surface-variant cursor-pointer">
+<input checked="" class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"> Email
+                                    </label>
+<label class="flex items-center gap-2 text-xs text-on-surface-variant cursor-pointer">
+<input class="rounded border-outline-variant text-primary focus:ring-primary" type="checkbox"> Push
+                                    </label>
+</div>
+</div>
+</div>
+</section>
+<!-- Integrations Section -->
+<section class="bg-surface-container-lowest border border-outline-variant rounded-xl p-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-sm flex items-center gap-2 text-lg">
+<span class="material-symbols-outlined text-secondary-container">sync_alt</span> Integrasi SSO
+                        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Koneksi sistem identitas kampus utama.</p>
+<div class="bg-surface-container-low p-3 rounded-lg border border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-container">hub</span>
+<div>
+<span class="block font-button text-button text-on-surface">Campus SSO</span>
+<span class="block text-[10px] text-primary flex items-center gap-1 mt-0.5">
+<span class="w-2 h-2 rounded-full bg-green-500"></span> Terhubung
+                                    </span>
+</div>
+</div>
+<button class="text-xs text-on-surface-variant underline hover:text-primary transition-colors">Kelola</button>
+</div>
+</section>
+</div>
+</div>
+<!-- Global Actions -->
+<div class="mt-stack-lg pt-stack-md border-t border-outline-variant flex justify-end gap-4 mb-stack-lg">
+<button class="font-button text-button px-6 py-2 rounded text-primary hover:bg-surface-variant transition-colors bg-transparent border border-transparent">Batalkan</button>
+<button class="font-button text-button px-6 py-2 rounded bg-primary text-on-primary hover:opacity-90 transition-opacity shadow-[0_4px_16px_rgba(0,6,102,0.15)] ring-2 ring-transparent focus:ring-secondary-container">Simpan Perubahan</button>
+</div>
+</main>
+</div>
+<!-- Script for custom toggle interaction visual fix if needed, though pure CSS handles the basic switch -->
+<script>
+        // Setup toggle switches logic
+        document.querySelectorAll('.toggle-checkbox').forEach(toggle => {
+            toggle.addEventListener('change', function() {
+                // The CSS handles the visual translation
+                // This could be used for API calls
+                console.log('Toggle state changed:', this.id, this.checked);
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html><html lang="id"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>FEB-X Marketplace - Landing Page</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface-variant": "#454652",
+                      "on-error-container": "#93000a",
+                      "secondary": "#785900",
+                      "primary-fixed": "#e0e0ff",
+                      "surface-bright": "#f9f9f9",
+                      "on-error": "#ffffff",
+                      "error": "#ba1a1a",
+                      "surface": "#f9f9f9",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#5b4300",
+                      "error-container": "#ffdad6",
+                      "inverse-primary": "#bdc2ff",
+                      "surface-variant": "#e2e2e2",
+                      "primary-container": "#1a237e",
+                      "on-tertiary-fixed-variant": "#293ca0",
+                      "on-secondary": "#ffffff",
+                      "tertiary": "#000f5b",
+                      "primary-fixed-dim": "#bdc2ff",
+                      "secondary-fixed": "#ffdf9e",
+                      "on-secondary-container": "#6c5000",
+                      "on-primary-fixed": "#000767",
+                      "on-primary-fixed-variant": "#343d96",
+                      "outline-variant": "#c6c5d4",
+                      "surface-tint": "#4c56af",
+                      "tertiary-container": "#072189",
+                      "surface-container-low": "#f3f3f3",
+                      "tertiary-fixed-dim": "#bac3ff",
+                      "secondary-container": "#fdc003",
+                      "on-background": "#1a1c1c",
+                      "background": "#f9f9f9",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-secondary-fixed": "#261a00",
+                      "tertiary-fixed": "#dee0ff",
+                      "on-primary-container": "#8690ee",
+                      "on-primary": "#ffffff",
+                      "outline": "#767683",
+                      "primary": "#000666",
+                      "on-tertiary-fixed": "#00105c",
+                      "surface-dim": "#dadada",
+                      "surface-container-high": "#e8e8e8",
+                      "on-surface": "#1a1c1c",
+                      "surface-container": "#eeeeee",
+                      "surface-container-highest": "#e2e2e2",
+                      "inverse-surface": "#2f3131",
+                      "on-tertiary-container": "#7e90f8",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#fabd00"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "margin-desktop": "40px",
+                      "margin-mobile": "16px",
+                      "container-max": "1440px",
+                      "unit": "4px",
+                      "stack-md": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "button": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 16px rgba(0, 6, 102, 0.04);
+        }
+        .zebra-row:nth-child(even) {
+            background-color: #F9F9F9;
+        }
+        
+        /* Custom UI Patterns */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<nav class="bg-surface-container-lowest border-b border-outline-variant flex justify-between items-center w-full px-margin-desktop md:px-margin-desktop px-margin-mobile h-16 sticky top-0 z-50">
+<div class="flex items-center gap-8">
+<a class="font-headline-md text-headline-md font-bold text-primary" href="#">FEB-X</a>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-primary font-bold border-b-2 border-secondary pb-1 font-body-md text-body-md hover:bg-surface-container transition-colors px-2 py-1 rounded" href="#">Marketplace</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container transition-colors px-2 py-1 rounded" href="#">Dashboard</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:bg-surface-container transition-colors px-2 py-1 rounded" href="#">Evaluasi</a>
+</div>
+</div>
+<!-- Search Bar -->
+<div class="hidden md:flex flex-1 max-w-md mx-8 relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-full py-2 pl-10 pr-4 text-body-sm font-body-sm focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Cari produk mahasiswa..." type="text">
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container p-2 rounded-full transition-colors cursor-pointer active:opacity-80 transition-opacity flex">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+<button class="text-on-surface-variant hover:bg-surface-container p-2 rounded-full transition-colors cursor-pointer active:opacity-80 transition-opacity flex">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="bg-primary text-on-primary font-button text-button px-4 py-2 rounded-lg hover:bg-primary-container transition-colors focus:ring-2 focus:ring-secondary focus:ring-offset-2">SSO Login</button>
+</div>
+</nav>
+<main class="flex-grow">
+<!-- Hero Section with Bento Grid approach -->
+<section class="max-w-[1440px] mx-auto px-margin-desktop md:px-margin-desktop px-margin-mobile py-stack-lg md:py-16">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Hero Card -->
+<div class="md:col-span-8 bg-surface-container-lowest rounded-xl border border-outline-variant p-8 flex flex-col justify-center relative overflow-hidden ambient-shadow h-[400px]">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-10" data-alt="A modern, abstract digital illustration representing business and commerce in a university setting. Features geometric shapes overlapping in shades of deep navy blue, pristine white, and vibrant gold accents. The style is clean, corporate yet dynamic, bathed in bright, soft light typical of a premium fintech interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsus8jbA_H2QKXk7X-YNhr_9llyMmcWmDYDaMwJ8AyjI_bcp6G_1YXrjEcBi4mPc-wwtr0KyvPo9ktFMrrFAymcJgZgZ3kRzdMHYyHViFv_bH5NDUXkwTG_yzsLe_Pi-cFlILyn1jpL2dQjrM4srwthOHIb41C8AF1voZjQ4UGZCDwK9MPi23JRRkcdlacHdT8O2bRKtyCdVPuU9pf5SfFp190YyW2ibpjwby2AmsnpJHJ5Od7mxw8Sg">
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-lowest via-surface-container-lowest/90 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-xl">
+<h1 class="font-display-lg text-display-lg text-primary mb-stack-md">Dukung Inovasi Mahasiswa FEB</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-stack-lg">Temukan produk kreatif, jasa profesional, dan solusi inovatif langsung dari ekosistem bisnis mahasiswa.</p>
+<!-- Mobile Search -->
+<div class="md:hidden flex relative w-full mb-stack-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface border border-outline-variant rounded-full py-3 pl-10 pr-4 text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" placeholder="Cari produk mahasiswa..." type="text">
+</div>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary font-button text-button px-6 py-3 rounded-lg hover:bg-primary-container transition-colors focus:ring-2 focus:ring-secondary focus:ring-offset-2">Mulai Belanja</button>
+<button class="bg-transparent border border-primary text-primary font-button text-button px-6 py-3 rounded-lg hover:bg-surface-container-low transition-colors">Buka Toko</button>
+</div>
+</div>
+</div>
+<!-- Trending / Featured Mini Cards -->
+<div class="md:col-span-4 flex flex-col gap-gutter h-[400px]">
+<div class="flex-1 bg-secondary-container rounded-xl p-6 relative overflow-hidden flex flex-col justify-end ambient-shadow border border-outline-variant group cursor-pointer transition-transform hover:-translate-y-1">
+<div class="absolute top-4 right-4 bg-surface-container-lowest/80 backdrop-blur-sm px-3 py-1 rounded-full text-primary font-label-md text-label-md flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> Populer
+                        </div>
+<h3 class="font-headline-md text-headline-md text-on-secondary-container mb-2 relative z-10">Jasa Konsultasi Keuangan</h3>
+<p class="font-body-sm text-body-sm text-on-secondary-container/80 relative z-10">Oleh: FinTech Club</p>
+<div class="absolute right-0 bottom-0 opacity-20 translate-x-1/4 translate-y-1/4 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-[120px] icon-fill">analytics</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-low rounded-xl p-6 border-t-2 border-t-secondary border border-outline-variant flex flex-col justify-between ambient-shadow group cursor-pointer hover:bg-surface-container transition-colors">
+<div>
+<span class="material-symbols-outlined text-primary mb-2">storefront</span>
+<h3 class="font-headline-sm text-[20px] leading-[28px] font-semibold text-on-background">Festival Bisnis 2024</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Kunjungi tenant terbaik minggu ini.</p>
+</div>
+<div class="flex items-center text-primary font-label-md text-label-md gap-1">
+                            Lihat Detail <span class="material-symbols-outlined text-[16px] group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories Section -->
+<section class="max-w-[1440px] mx-auto px-margin-desktop md:px-margin-desktop px-margin-mobile py-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-stack-md">Kategori Unggulan</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<!-- Category 1 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col items-center justify-center gap-4 cursor-pointer hover:bg-surface-container transition-colors hover:border-primary group">
+<div class="w-16 h-16 rounded-full bg-primary-fixed/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-primary text-3xl">restaurant</span>
+</div>
+<span class="font-button text-button text-on-background">Makanan &amp; Minuman</span>
+</div>
+<!-- Category 2 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col items-center justify-center gap-4 cursor-pointer hover:bg-surface-container transition-colors hover:border-primary group">
+<div class="w-16 h-16 rounded-full bg-secondary-fixed/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-secondary text-3xl">design_services</span>
+</div>
+<span class="font-button text-button text-on-background">Jasa &amp; Desain</span>
+</div>
+<!-- Category 3 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col items-center justify-center gap-4 cursor-pointer hover:bg-surface-container transition-colors hover:border-primary group">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed/30 flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-tertiary text-3xl">devices</span>
+</div>
+<span class="font-button text-button text-on-background">Teknologi</span>
+</div>
+<!-- Category 4 -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-6 flex flex-col items-center justify-center gap-4 cursor-pointer hover:bg-surface-container transition-colors hover:border-primary group">
+<div class="w-16 h-16 rounded-full bg-surface-container-high flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-on-surface text-3xl">grid_view</span>
+</div>
+<span class="font-button text-button text-on-background">Lihat Semua</span>
+</div>
+</div>
+</section>
+<!-- New Products Section (Asymmetric layout) -->
+<section class="bg-surface-container-low py-16">
+<div class="max-w-[1440px] mx-auto px-margin-desktop md:px-margin-desktop px-margin-mobile">
+<div class="flex justify-between items-end mb-stack-lg">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-2">Produk Terbaru</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Rilisan terkini dari mahasiswa FEB</p>
+</div>
+<button class="hidden md:flex items-center gap-2 text-primary font-button text-button hover:underline">
+                        Lihat Katalog <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Product Card 1 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col ambient-shadow group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 bg-surface-variant relative">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist product photography shot of a sleek, modern planner notebook with a deep navy cover. Placed on a pristine white desk with subtle gold accents in the background. High-key lighting, soft shadows, corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzy9fMlbbpmP5j0b5v4YjTMUQOADcg0NTQdfr-puia8kQ76n6lzDt-KeGZRkeQpSW9hoJT0OevJAQm-1Sfb0jVdj_oXluJyv5VXUp8539IzYDrRguKKUzfDghQHT8VtJna9OXVml5S_kvw_RldqvCmVnklT93q1iVd0wYg0yxmwyj8DYHtDBZZfhkeERoec7RKQJyio0Q4EIg325El2e8vKlr_voNW83_Z5tpW1F1aYSgqzQ-Xw-VrhQ">
+<div class="absolute top-3 left-3 bg-primary text-on-primary font-label-md text-label-md px-2 py-1 rounded">Baru</div>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-[20px] leading-[28px] font-semibold text-on-background line-clamp-2">Planner Akademik Pro 2024</h3>
+<span class="font-label-md text-label-md text-primary bg-primary-fixed px-2 py-1 rounded">Barang</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Oleh: Koperasi Mahasiswa</p>
+<div class="mt-auto flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="font-headline-sm text-[20px] font-bold text-primary">Rp 85.000</span>
+<button class="text-primary hover:bg-primary-fixed p-2 rounded-full transition-colors flex">
+<span class="material-symbols-outlined icon-fill">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col ambient-shadow group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 bg-surface-variant relative">
+<img class="w-full h-full object-cover" data-alt="A professional flat lay of healthy catering food in a modern, eco-friendly bento box. Vibrant fresh vegetables, grilled chicken on a bed of quinoa. Bright, clean lighting against a light grey background with subtle depth. Minimalist food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7K19z8Zxeb_X3tceoddUE_rm061HPqd4h0dhQm-t3wxAHTzOaPmupQikLAF2s0QNisfZ0POKhHJqmLYaSLfuKUF3LYriFHXn3V1H5tRa9qrBYxp0y96Y7nZQtcWO0oEElzLHoTVNm2Nb0T8OuQrVFR9kjx0-3FP9Xo5T3ILFdBfe0Rea-39pTohRdKGwtsY-aN_EFDALrorK-ZQZCio6t7xtVQAaTWVFIUxiYAtBvi9cCezpNULwfew">
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-[20px] leading-[28px] font-semibold text-on-background line-clamp-2">Healthy Lunch Box Mingguan</h3>
+<span class="font-label-md text-label-md text-secondary bg-secondary-fixed px-2 py-1 rounded">Makanan</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Oleh: NutriFood Team</p>
+<div class="mt-auto flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="font-headline-sm text-[20px] font-bold text-primary">Rp 150.000<span class="text-sm font-normal text-on-surface-variant">/minggu</span></span>
+<button class="text-primary hover:bg-primary-fixed p-2 rounded-full transition-colors flex">
+<span class="material-symbols-outlined icon-fill">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant overflow-hidden flex flex-col ambient-shadow group hover:-translate-y-1 transition-transform duration-300">
+<div class="h-48 bg-surface-variant relative flex items-center justify-center">
+<div class="absolute inset-0 opacity-20">
+<img class="w-full h-full object-cover" data-alt="Abstract visualization of data and code on a modern laptop screen. Clean lines, deep navy and bright white color palette with glowing accents. Corporate tech aesthetic, conveying professional services." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAerqnZNd05gR4ZQUSWVf15CjHUEs_quc7K8yEi3_HSwqSTLteGi236oeoQ1Z-aXc8CA3tc2rLHaUTA9tXRuZe721iQHBZJiebIPcAcVK4gvcZ2Csukkxa91ONMy46eznczgC4yotbEYgcxYzjjY95EkOAx57Osf8FiwjHUEZsAElPyqIVcfinhUoOlz32gE727FxLdY6WKd6vOiC-_DxHmkexcOFcKRAISTYBwol8tUHPcEoSut4I5Tg">
+</div>
+<span class="material-symbols-outlined text-6xl text-primary relative z-10">web</span>
+</div>
+<div class="p-6 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-[20px] leading-[28px] font-semibold text-on-background line-clamp-2">Pembuatan Landing Page UMKM</h3>
+<span class="font-label-md text-label-md text-tertiary bg-tertiary-fixed px-2 py-1 rounded">Jasa</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-4">Oleh: TechBiz Solutions</p>
+<div class="mt-auto flex justify-between items-center pt-4 border-t border-outline-variant">
+<span class="font-headline-sm text-[20px] font-bold text-primary">Mulai Rp 500k</span>
+<button class="text-primary hover:bg-primary-fixed p-2 rounded-full transition-colors flex">
+<span class="material-symbols-outlined icon-fill">add_shopping_cart</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<button class="md:hidden w-full mt-stack-md flex items-center justify-center gap-2 text-primary border border-primary font-button text-button px-4 py-3 rounded-lg hover:bg-surface-container-low">
+                        Lihat Semua Produk
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest border-t border-outline-variant py-8 mt-auto">
+<div class="max-w-[1440px] mx-auto px-margin-desktop md:px-margin-desktop px-margin-mobile text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
+<div>
+<span class="font-headline-md text-headline-md font-bold text-primary">FEB-X</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1">Ecosystem Bisnis Mahasiswa</p>
+</div>
+<div class="flex gap-6 font-body-sm text-body-sm text-on-surface-variant">
+<a class="hover:text-primary transition-colors" href="#">Tentang</a>
+<a class="hover:text-primary transition-colors" href="#">Bantuan</a>
+<a class="hover:text-primary transition-colors" href="#">Privasi</a>
+</div>
+</div>
+</footer>
+</body></html>

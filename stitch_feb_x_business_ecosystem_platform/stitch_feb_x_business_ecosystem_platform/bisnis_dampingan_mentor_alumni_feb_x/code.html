@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Bisnis Dampingan - FEB-X Mentor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "background": "#f9f9f9",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#1a1c1c",
+                      "on-primary-fixed-variant": "#343d96",
+                      "on-tertiary-container": "#7e90f8",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#6c5000",
+                      "on-surface": "#1a1c1c",
+                      "secondary-container": "#fdc003",
+                      "primary-fixed-dim": "#bdc2ff",
+                      "tertiary": "#000f5b",
+                      "secondary-fixed-dim": "#fabd00",
+                      "surface-tint": "#4c56af",
+                      "surface-container-lowest": "#ffffff",
+                      "inverse-surface": "#2f3131",
+                      "primary-fixed": "#e0e0ff",
+                      "surface-dim": "#dadada",
+                      "on-primary-container": "#8690ee",
+                      "secondary-fixed": "#ffdf9e",
+                      "surface-container": "#eeeeee",
+                      "on-tertiary": "#ffffff",
+                      "surface-container-high": "#e8e8e8",
+                      "primary": "#000666",
+                      "tertiary-container": "#072189",
+                      "on-primary-fixed": "#000767",
+                      "outline": "#767683",
+                      "on-secondary-fixed-variant": "#5b4300",
+                      "inverse-primary": "#bdc2ff",
+                      "on-tertiary-fixed": "#00105c",
+                      "primary-container": "#1a237e",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f3f3f3",
+                      "on-secondary-fixed": "#261a00",
+                      "on-primary": "#ffffff",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-surface-variant": "#454652",
+                      "tertiary-fixed": "#dee0ff",
+                      "on-error-container": "#93000a",
+                      "surface-container-highest": "#e2e2e2",
+                      "tertiary-fixed-dim": "#bac3ff",
+                      "surface-variant": "#e2e2e2",
+                      "surface": "#f9f9f9",
+                      "outline-variant": "#c6c5d4",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#f9f9f9",
+                      "secondary": "#785900",
+                      "on-tertiary-fixed-variant": "#293ca0"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "40px",
+                      "stack-sm": "8px",
+                      "container-max": "1440px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px",
+                      "unit": "4px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "label-md": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "button": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-md": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "button": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md h-screen flex overflow-hidden">
+<!-- SideNavBar -->
+<nav class="bg-surface dark:bg-surface-dim docked h-full w-64 left-0 top-0 border-r border-outline-variant dark:border-outline flex flex-col h-screen fixed left-0 top-0 py-stack-lg z-40">
+<div class="px-gutter mb-stack-lg">
+<h1 class="font-headline-lg text-headline-lg font-bold text-primary dark:text-on-primary-fixed">FEB-X Mentor</h1>
+<p class="font-label-md text-label-md text-on-surface-variant mt-unit">Mentor/Alumni Program</p>
+</div>
+<ul class="flex flex-col gap-unit px-stack-sm flex-1">
+<li>
+<a class="flex items-center gap-stack-sm px-stack-md py-stack-sm rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                    Ringkasan
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-stack-sm px-stack-md py-stack-sm rounded-lg text-primary dark:text-inverse-primary font-bold border-r-4 border-secondary bg-surface-container-low opacity-90 transition-all font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined icon-fill" data-icon="business_center" data-weight="fill">business_center</span>
+                    Bisnis Dampingan
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-stack-sm px-stack-md py-stack-sm rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="rate_review">rate_review</span>
+                    Masukan &amp; Catatan
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-stack-sm px-stack-md py-stack-sm rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="handshake">handshake</span>
+                    Peluang Kolaborasi
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-stack-sm px-stack-md py-stack-sm rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+                    Profil Bisnis
+                </a>
+</li>
+</ul>
+<div class="px-gutter mt-auto pt-stack-lg">
+<a class="flex items-center gap-stack-sm px-stack-md py-stack-sm rounded-lg text-on-surface-variant dark:text-surface-variant hover:bg-surface-container-high dark:hover:bg-surface-container-highest transition-colors font-label-md text-label-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Pengaturan
+            </a>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col ml-64 overflow-y-auto bg-background">
+<!-- TopAppBar -->
+<header class="bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline flex justify-between items-center w-full h-16 px-margin-desktop sticky top-0 z-30">
+<div class="flex items-center">
+<h2 class="font-headline-md text-headline-md font-black text-primary dark:text-on-primary-fixed">FEB-X Ecosystem</h2>
+</div>
+<div class="flex items-center gap-stack-lg">
+<div class="relative hidden md:block">
+<span class="material-symbols-outlined absolute left-stack-sm top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border border-outline-variant rounded-lg text-body-sm focus:ring-2 focus:ring-secondary-container focus:border-primary outline-none w-64 transition-all" placeholder="Cari..." type="text"/>
+</div>
+<div class="flex items-center gap-stack-sm text-on-surface-variant dark:text-surface-variant">
+<button class="p-2 hover:text-primary dark:hover:text-inverse-primary rounded-full hover:bg-surface-container-high transition-colors focus:ring-2 focus:ring-secondary-container outline-none">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="p-2 hover:text-primary dark:hover:text-inverse-primary rounded-full hover:bg-surface-container-high transition-colors focus:ring-2 focus:ring-secondary-container outline-none">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+</button>
+<img alt="Mentor Avatar" class="w-8 h-8 rounded-full object-cover ml-2 border border-outline-variant" data-alt="A professional headshot of a business mentor in a modern office setting. The individual is wearing smart-casual corporate attire, smiling warmly. The lighting is bright and even, creating a clean, modern aesthetic suitable for a professional profile avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHvnl5-a8vPYqXXhlVrvz_p6yIkqZgGxjRTunaEt01YTVO3V6AIJeZIXF86wsgLbkelD5n4oc1o0qYTJN-Bw2wP0Al6uaL_lhSElUvxr3_8ElBNW_44OEKrGTJFYpve82dHX7qAOFAOwOH-PEFVgq-C0Rz86njfYur4sO7ahLO_9F1puXFEZQHflYllxirV38giNR7jHWWM9y-0P0OfD1y29le8uR2UEDcakjJ7Vvi_oKXQl0zkH02FA"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<div class="p-margin-desktop max-w-container-max mx-auto w-full">
+<!-- Page Header -->
+<div class="mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-unit">Bisnis Dampingan</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Pantau performa dan berikan arahan strategis untuk bisnis mahasiswa yang Anda bimbing.</p>
+</div>
+<!-- Stats Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter mb-stack-lg">
+<!-- Stat Card 1 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-start mb-stack-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Total Bisnis Dampingan</span>
+<div class="p-2 bg-primary-container rounded-lg text-on-primary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="business">business</span>
+</div>
+</div>
+<div class="font-headline-md text-headline-md text-primary">8 Bisnis</div>
+</div>
+<!-- Stat Card 2 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-start mb-stack-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Sesi Konsultasi Bulan Ini</span>
+<div class="p-2 bg-secondary-container rounded-lg text-on-secondary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="event_available">event_available</span>
+</div>
+</div>
+<div class="font-headline-md text-headline-md text-primary">12 Sesi</div>
+</div>
+<!-- Stat Card 3 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-start mb-stack-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Total Omzet Portfolio</span>
+<div class="p-2 bg-tertiary-container rounded-lg text-on-tertiary-container">
+<span class="material-symbols-outlined text-[20px]" data-icon="payments">payments</span>
+</div>
+</div>
+<div class="font-headline-md text-headline-md text-primary">Rp 45.2M</div>
+</div>
+<!-- Stat Card 4 -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md flex flex-col justify-between hover:bg-surface-container-low transition-colors">
+<div class="flex justify-between items-start mb-stack-sm">
+<span class="font-label-md text-label-md text-on-surface-variant">Rata-rata Rating Mentoring</span>
+<div class="p-2 bg-primary-fixed rounded-lg text-on-primary-fixed">
+<span class="material-symbols-outlined text-[20px]" data-icon="star">star</span>
+</div>
+</div>
+<div class="font-headline-md text-headline-md text-primary">4.9<span class="text-body-sm text-on-surface-variant">/5.0</span></div>
+</div>
+</div>
+<!-- Two Column Layout -->
+<div class="grid grid-cols-1 xl:grid-cols-3 gap-gutter">
+<!-- Main Data Table (Span 2 cols) -->
+<div class="xl:col-span-2">
+<div class="bg-surface border border-outline-variant rounded-xl overflow-hidden">
+<div class="p-stack-md border-b border-outline-variant bg-surface-container-lowest flex justify-between items-center">
+<h3 class="font-headline-md text-headline-md text-primary">Daftar Bisnis Dampingan</h3>
+<button class="font-button text-button text-primary hover:text-tertiary flex items-center gap-unit">
+                                Lihat Semua <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="p-stack-md font-label-md text-label-md text-primary font-bold">Nama Bisnis</th>
+<th class="p-stack-md font-label-md text-label-md text-primary font-bold">Ketua Tim</th>
+<th class="p-stack-md font-label-md text-label-md text-primary font-bold">Kategori</th>
+<th class="p-stack-md font-label-md text-label-md text-primary font-bold">Status</th>
+<th class="p-stack-md font-label-md text-label-md text-primary font-bold">Omzet</th>
+<th class="p-stack-md font-label-md text-label-md text-primary font-bold text-right">Aksi</th>
+</tr>
+</thead>
+<tbody>
+<!-- Row 1 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-lowest transition-colors h-[48px]">
+<td class="p-stack-md">
+<div class="flex items-center gap-stack-sm">
+<img class="w-8 h-8 rounded border border-outline-variant object-cover" data-alt="A modern, minimalist logo for an Agrotech startup named 'AgriGrow Tech'. The logo features a stylized leaf morphing into a circuit board line, rendered in vibrant green and deep navy blue against a crisp white background. The aesthetic is clean, professional, and forward-looking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo0C-JXFSnK8mah5z_ij7bG7coHXq4d6mhyys0iWkMSfjIb77AG05XRCLO-BWaX9d_OHBPEwqg2ha3WXRhAutHWbm6P3UV0uFb1HCrNKy1IcFY18x5EGbcnW1_kvpfhnBE2KWAL2x0CFyM0cvKVPeapM_eq6Df1lPkKtJfpRyIYipBADjK3yWG_5bFVy8N5J_vrqMzkx_i0GEty7Mfrr1M3Gwvz71TJ2aljFi0E1hbzX_ckG9McUyBMQ"/>
+<span class="font-body-md text-body-md font-semibold text-on-surface">AgriGrow Tech</span>
+</div>
+</td>
+<td class="p-stack-md font-body-sm text-body-sm text-on-surface-variant">Budi Santoso</td>
+<td class="p-stack-md font-body-sm text-body-sm text-on-surface-variant">Agrotech</td>
+<td class="p-stack-md">
+<span class="px-2 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-[10px]">Scaling</span>
+</td>
+<td class="p-stack-md font-body-sm text-body-sm text-on-surface">Rp 15.000.000</td>
+<td class="p-stack-md flex justify-end gap-stack-sm">
+<button class="px-4 py-2 bg-primary text-on-primary font-button text-button rounded focus:ring-2 focus:ring-secondary-container hover:bg-primary-container transition-colors">Beri Masukan</button>
+<button class="px-4 py-2 border border-primary text-primary font-button text-button rounded hover:bg-surface-container-low transition-colors">Cek Kolaborasi</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="border-b border-outline-variant bg-[#F9F9F9] hover:bg-surface-container-lowest transition-colors h-[48px]">
+<td class="p-stack-md">
+<div class="flex items-center gap-stack-sm">
+<img class="w-8 h-8 rounded border border-outline-variant object-cover" data-alt="A clean, eco-friendly logo for 'EcoPack Solutions'. It features a simple geometric box design intertwined with a recycling symbol in earthy tones of green and brown. The background is white, conveying a sense of sustainability and modern packaging design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDIbLSLLbYUqrvDVPwiM4lVv0EENCY-N01W4v72lhGj3FawIiTIUUDtlKElyBP9p5886L6CrkxFpmAaBftM_9SwqPTwVEvG8Me0R-0yQS-7rdMTDgxlKz8QVU8CHWjNTUrLeEJasPlQ_5BdPZemRvDVpAxTOWabzY07W9FkZZ90LS6l43UIOMcqNmpz5hmySPHGSlS_WY8W3JFYa25F8_5RYPj4_HwjUkBWtUSEtEEGY0dOiaZnyFlaA"/>
+<span class="font-body-md text-body-md font-semibold text-on-surface">EcoPack Solutions</span>
+</div>
+</td>
+<td class="p-stack-md font-body-sm text-body-sm text-on-surface-variant">Siti Aminah</td>
+<td class="p-stack-md font-body-sm text-body-sm text-on-surface-variant">Sustainability</td>
+<td class="p-stack-md">
+<span class="px-2 py-1 rounded-full bg-primary-fixed text-on-primary-fixed font-label-md text-[10px]">Market Ready</span>
+</td>
+<td class="p-stack-md font-body-sm text-body-sm text-on-surface">Rp 22.500.000</td>
+<td class="p-stack-md flex justify-end gap-stack-sm">
+<button class="px-4 py-2 bg-primary text-on-primary font-button text-button rounded focus:ring-2 focus:ring-secondary-container hover:bg-primary-container transition-colors">Beri Masukan</button>
+<button class="px-4 py-2 border border-primary text-primary font-button text-button rounded hover:bg-surface-container-low transition-colors">Cek Kolaborasi</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="border-b border-outline-variant hover:bg-surface-container-lowest transition-colors h-[48px]">
+<td class="p-stack-md">
+<div class="flex items-center gap-stack-sm">
+<img class="w-8 h-8 rounded border border-outline-variant object-cover" data-alt="A trendy, modern logo for a food and beverage brand called 'Kopi Kampus'. The design incorporates a stylized coffee cup with a graduation cap element, utilizing warm tones of deep brown and mustard yellow. The overall aesthetic is youthful and energetic, set on a clean white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH4nOItd0QyV_5fiGkBCAVdMmpqSycUwv449GOLawfYkiQcqTA4gIL9dJeWMz_zuBz70HyjSsYFZu4QAM7EQXbzn_2S8tB18B4cLpal70ngfXSSKEuqg6BmaysdwYodDBg6j2ugw3Tx3vnVB4HHV4i0OUTfmjFOuHBwKR45EjSf5qZxGxU9lrra0CabK6Q-eWLk1Kws2wdPGQSuuiJBoJ2HB9tvzajgdP5-GoeV7YlBiYcp8DrRCIVoA"/>
+<span class="font-body-md text-body-md font-semibold text-on-surface">Kopi Kampus</span>
+</div>
+</td>
+<td class="p-stack-md font-body-sm text-body-sm text-on-surface-variant">Andi Wijaya</td>
+<td class="p-stack-md font-body-sm text-body-sm text-on-surface-variant">F&amp;B</td>
+<td class="p-stack-md">
+<span class="px-2 py-1 rounded-full bg-surface-variant text-on-surface-variant font-label-md text-[10px]">Prototype</span>
+</td>
+<td class="p-stack-md font-body-sm text-body-sm text-on-surface">Rp 7.700.000</td>
+<td class="p-stack-md flex justify-end gap-stack-sm">
+<button class="px-4 py-2 bg-primary text-on-primary font-button text-button rounded focus:ring-2 focus:ring-secondary-container hover:bg-primary-container transition-colors">Beri Masukan</button>
+<button class="px-4 py-2 border border-primary text-primary font-button text-button rounded hover:bg-surface-container-low transition-colors">Cek Kolaborasi</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<!-- Right Sidebar / Widgets (Span 1 col) -->
+<div class="xl:col-span-1 flex flex-col gap-gutter">
+<!-- Consultation Requests Widget -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md relative overflow-hidden group">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none"></div>
+<h4 class="font-headline-md text-headline-md text-primary mb-stack-md flex items-center gap-unit">
+<span class="material-symbols-outlined">notification_important</span>
+                            Permintaan Konsultasi Baru
+                        </h4>
+<div class="flex flex-col gap-stack-sm relative z-10">
+<!-- Item 1 -->
+<div class="flex gap-stack-sm items-start p-3 bg-surface-container-lowest rounded-lg border border-outline-variant hover:border-primary-fixed transition-colors">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold font-body-md shrink-0">BS</div>
+<div>
+<h5 class="font-body-md text-body-md font-semibold text-on-surface">Budi Santoso</h5>
+<p class="font-label-md text-label-md text-on-surface-variant mb-unit">AgriGrow Tech</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">"Mohon feedback segera mengenai strategi pricing untuk Q3. Investor menanyakan proyeksi margin."</p>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex gap-stack-sm items-start p-3 bg-surface-container-lowest rounded-lg border border-outline-variant hover:border-primary-fixed transition-colors">
+<div class="w-10 h-10 rounded-full bg-tertiary-container text-on-tertiary-container flex items-center justify-center font-bold font-body-md shrink-0">SA</div>
+<div>
+<h5 class="font-body-md text-body-md font-semibold text-on-surface">Siti Aminah</h5>
+<p class="font-label-md text-label-md text-on-surface-variant mb-unit">EcoPack Solutions</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">"Kendala di rantai pasok bahan baku daur ulang. Butuh saran alternatif supplier."</p>
+</div>
+</div>
+</div>
+<button class="w-full mt-stack-md py-2 text-center text-primary font-button text-button hover:bg-surface-container-low rounded transition-colors relative z-10">Lihat Semua Permintaan</button>
+</div>
+<!-- Recent Notes Widget -->
+<div class="bg-surface border border-outline-variant rounded-xl p-stack-md relative shadow-[0_16px_32px_-12px_rgba(0,6,102,0.04)]">
+<h4 class="font-headline-md text-headline-md text-primary mb-stack-md flex items-center gap-unit">
+<span class="material-symbols-outlined">edit_note</span>
+                            Catatan Mentor Terakhir
+                        </h4>
+<div class="flex flex-col gap-stack-sm">
+<div class="border-l-2 border-primary pl-3 py-1">
+<p class="font-body-sm text-body-sm text-on-surface italic">"Fokus pada retensi pelanggan awal sebelum scale up operasional. Evaluasi CAC bulan ini."</p>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">- untuk Kopi Kampus (2 hari lalu)</p>
+</div>
+<div class="border-l-2 border-outline pl-3 py-1 mt-2">
+<p class="font-body-sm text-body-sm text-on-surface italic">"Pitch deck sudah bagus, perbaiki slide proyeksi finansial agar lebih realistis untuk Seed Round."</p>
+<p class="font-label-md text-label-md text-on-surface-variant mt-1">- untuk EcoPack Solutions (1 minggu lalu)</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>
