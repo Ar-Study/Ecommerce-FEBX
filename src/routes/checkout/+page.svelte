@@ -1,6 +1,7 @@
 <script>
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { mockProducts } from '$lib/data/mockData.js';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
@@ -53,8 +54,8 @@
   <Navbar
     cartCount={1}
     onOpenCart={() => {}}
-    onOpenLogin={() => goto('/login')}
-    onNavigateSection={() => goto('/')}
+    onOpenLogin={() => goto(`${base}/login`)}
+    onNavigateSection={() => goto(`${base}/`)}
   />
 
   <main class="page-container">
@@ -282,14 +283,14 @@
             <button
               type="button"
               class="btn-back-market"
-              onclick={() => goto('/')}
+              onclick={() => goto(`${base}/`)}
             >
               Kembali ke Marketplace
             </button>
             <button
               type="button"
               class="btn-dash"
-              onclick={() => goto('/dashboard')}
+              onclick={() => goto(`${base}/dashboard`)}
             >
               Lihat di Dashboard
             </button>

@@ -1,5 +1,6 @@
 <script>
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { demoRoles } from '$lib/data/mockData.js';
   import { logoutUser } from '$lib/stores/auth.js';
 
@@ -45,7 +46,7 @@
     <!-- Right: User Profile & Actions -->
     <div class="header-right">
       <a
-        href="/pengaturan"
+        href="{base}/pengaturan"
         class="icon-btn"
         title="Pengaturan Akun"
         aria-label="Pengaturan"
@@ -63,7 +64,7 @@
         <span class="noti-badge"></span>
       </button>
 
-      <a href="/pengaturan" class="user-chip text-decoration-none">
+      <a href="{base}/pengaturan" class="user-chip text-decoration-none">
         <img
           src={activeRole.avatar}
           alt={activeRole.name}
@@ -78,7 +79,7 @@
       <button
         type="button"
         class="icon-btn logout-header-btn"
-        onclick={() => { logoutUser(); goto('/'); }}
+        onclick={() => { logoutUser(); goto(`${base}/`); }}
         title="Keluar / Logout"
         aria-label="Logout"
       >

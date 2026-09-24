@@ -1,6 +1,7 @@
 <script>
   import { page } from '$app/stores';
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { mockProducts } from '$lib/data/mockData.js';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
@@ -29,7 +30,7 @@
   }
 
   function handleDirectBuy() {
-    goto(`/checkout?productId=${product.id}&qty=${quantity}`);
+    goto(`${base}/checkout?productId=${product.id}&qty=${quantity}`);
   }
 
   let relatedProducts = $derived(
@@ -44,17 +45,17 @@
 <div class="product-page">
   <Navbar
     cartCount={2}
-    onOpenCart={() => goto('/checkout')}
-    onOpenLogin={() => goto('/login')}
-    onNavigateSection={() => goto('/')}
+    onOpenCart={() => goto(`${base}/checkout`)}
+    onOpenLogin={() => goto(`${base}/login`)}
+    onNavigateSection={() => goto(`${base}/`)}
   />
 
   <main class="page-container">
     <!-- Breadcrumb -->
     <nav class="breadcrumb font-mono">
-      <a href="/">Beranda</a>
+      <a href="{base}/">Beranda</a>
       <span class="material-symbols-outlined text-xs">chevron_right</span>
-      <a href="/">Marketplace</a>
+      <a href="{base}/">Marketplace</a>
       <span class="material-symbols-outlined text-xs">chevron_right</span>
       <span class="active">{product.name}</span>
     </nav>
@@ -186,7 +187,7 @@
       <h2 class="section-title">Produk Mahasiswa Terkait</h2>
       <div class="related-grid">
         {#each relatedProducts as rel}
-          <a href="/product/{rel.id}" class="related-card">
+          <a href="{base}/product/{rel.id}" class="related-card">
             <img src={rel.image} alt={rel.name} class="rel-img" />
             <div class="rel-body">
               <span class="rel-name">{rel.name}</span>

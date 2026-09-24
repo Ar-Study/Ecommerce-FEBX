@@ -1,5 +1,6 @@
 <script>
   import { categories } from '$lib/data/mockData.js';
+  import { base } from '$app/paths';
 
   let {
     products = [],
@@ -245,7 +246,7 @@
 
                 <div class="card-actions">
                   <a
-                    href="/product/{product.id}"
+                    href="{base}/product/{product.id}"
                     class="btn-detail-link"
                     onclick={(e) => e.stopPropagation()}
                     aria-label="Lihat Detail Lengkap"

@@ -1,5 +1,6 @@
 <script>
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { onMount } from 'svelte';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
@@ -22,7 +23,7 @@
   // Auth guard: hanya boleh diakses bila sudah login
   $effect(() => {
     if (!$currentUser) {
-      goto('/login');
+      goto(`${base}/login`);
     } else {
       if ($currentUser.name) fullName = $currentUser.name;
       if ($currentUser.email) email = $currentUser.email;
@@ -62,9 +63,9 @@
 <div class="settings-page">
   <Navbar
     cartCount={0}
-    onOpenCart={() => goto('/checkout')}
-    onOpenLogin={() => goto('/login')}
-    onNavigateSection={() => goto('/')}
+    onOpenCart={() => goto(`${base}/checkout`)}
+    onOpenLogin={() => goto(`${base}/login`)}
+    onNavigateSection={() => goto(`${base}/`)}
   />
 
   <main class="page-container">
@@ -74,7 +75,7 @@
         <p class="page-sub">Kelola preferensi profil, autentikasi keamanan 2FA, dan notifikasi transaksi kampus.</p>
       </div>
 
-      <a href="/dashboard" class="btn-dash-back font-mono">
+      <a href="{base}/dashboard" class="btn-dash-back font-mono">
         <span class="material-symbols-outlined text-sm">dashboard</span>
         <span>Kembali ke Dashboard</span>
       </a>

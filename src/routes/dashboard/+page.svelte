@@ -1,5 +1,6 @@
 <script>
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import DashboardHeader from '$lib/components/dashboard/DashboardHeader.svelte';
   import DashboardSidebar from '$lib/components/dashboard/DashboardSidebar.svelte';
   import StudentSellerView from '$lib/components/dashboard/StudentSellerView.svelte';
@@ -65,7 +66,7 @@
   <DashboardHeader
     {activeRoleId}
     onSelectRole={handleSelectRole}
-    onNavigateHome={() => goto('/')}
+    onNavigateHome={() => goto(`${base}/`)}
     onToggleSidebar={() => isSidebarOpen = !isSidebarOpen}
   />
 

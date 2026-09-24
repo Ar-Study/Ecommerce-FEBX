@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   let {
     roleId = 'mahasiswa',
     activeTab = 'summary',
@@ -145,11 +146,11 @@
     {/if}
 
     <div class="sidebar-footer-links">
-      <a href="/pengaturan" class="footer-link">
+      <a href="{base}/pengaturan" class="footer-link">
         <span class="material-symbols-outlined text-sm">settings</span>
         <span>Pengaturan Akun</span>
       </a>
-      <a href="/" class="footer-link">
+      <a href="{base}/" class="footer-link">
         <span class="material-symbols-outlined text-sm">storefront</span>
         <span>Katalog Marketplace</span>
       </a>

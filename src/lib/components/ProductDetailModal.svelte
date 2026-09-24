@@ -1,4 +1,5 @@
 <script>
+  import { base } from '$app/paths';
   let {
     product = null,
     isOpen = false,
@@ -179,7 +180,7 @@
           </div>
 
           <div class="modal-footer-nav">
-            <a href="/product/{product.id}" class="link-full-page font-mono">
+            <a href="{base}/product/{product.id}" class="link-full-page font-mono">
               <span class="material-symbols-outlined text-xs">open_in_new</span>
               <span>Buka Halaman Khusus Produk Ini</span>
             </a>

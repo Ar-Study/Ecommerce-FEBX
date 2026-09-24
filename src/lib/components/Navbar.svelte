@@ -1,5 +1,6 @@
 <script>
   import { currentUser, logoutUser } from '$lib/stores/auth.js';
+  import { base } from '$app/paths';
 
   let {
     cartCount = 0,
@@ -21,7 +22,7 @@
   <div class="container nav-content">
     <!-- Brand / Logo -->
     <div class="nav-left">
-      <a href="/" class="brand-link" onclick={(e) => { e.preventDefault(); onNavigateSection('top'); }}>
+      <a href="{base}/" class="brand-link" onclick={(e) => { e.preventDefault(); onNavigateSection('top'); }}>
         <span class="material-symbols-outlined icon-fill brand-icon">account_balance</span>
         <div class="brand-text">
           <span class="brand-title">FEB-X</span>
@@ -79,7 +80,7 @@
       <!-- Settings (Hanya tampil jika sudah login) -->
       {#if $currentUser}
         <a
-          href="/pengaturan"
+          href="{base}/pengaturan"
           class="action-btn"
           title="Pengaturan Akun"
           aria-label="Pengaturan"
@@ -92,7 +93,7 @@
       {#if $currentUser}
         <div class="user-logged-actions">
           <a
-            href="/dashboard"
+            href="{base}/dashboard"
             class="sso-btn dashboard-link-btn"
             title="Buka Dashboard"
           >
@@ -154,7 +155,7 @@
             </div>
           </div>
           <a
-            href="/dashboard"
+            href="{base}/dashboard"
             class="mobile-nav-link active-link"
             onclick={() => { mobileMenuOpen = false; }}
           >
@@ -162,7 +163,7 @@
             Dashboard
           </a>
           <a
-            href="/pengaturan"
+            href="{base}/pengaturan"
             class="mobile-nav-link"
             onclick={() => { mobileMenuOpen = false; }}
           >

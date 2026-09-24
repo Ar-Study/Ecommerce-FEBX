@@ -1,5 +1,6 @@
 <script>
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { demoRoles } from '$lib/data/mockData.js';
   import { loginUser } from '$lib/stores/auth.js';
 
@@ -14,7 +15,7 @@
     loginUser(roleObj);
     setTimeout(() => {
       isSubmitting = false;
-      goto('/dashboard');
+      goto(`${base}/dashboard`);
     }, 600);
   }
 </script>
@@ -26,11 +27,11 @@
 <div class="login-page">
   <!-- Minimal Top Header -->
   <header class="login-header">
-    <a href="/" class="brand-link">
+    <a href="{base}/" class="brand-link">
       <span class="material-symbols-outlined text-primary text-3xl icon-fill">account_balance</span>
       <span class="brand-title">FEB-X</span>
     </a>
-    <a href="/" class="help-link font-mono">
+    <a href="{base}/" class="help-link font-mono">
       <span class="material-symbols-outlined text-sm">arrow_back</span>
       <span>Kembali ke Marketplace</span>
     </a>
@@ -134,7 +135,7 @@
           <div class="form-footer">
             <p class="footer-text">
               Belum punya akun bisnis?
-              <a href="/registrasi-bisnis" class="link-reg font-bold">Daftarkan Bisnis Mahasiswa</a>
+              <a href="{base}/registrasi-bisnis" class="link-reg font-bold">Daftarkan Bisnis Mahasiswa</a>
             </p>
           </div>
         </div>

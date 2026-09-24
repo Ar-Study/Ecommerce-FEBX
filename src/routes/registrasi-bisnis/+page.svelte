@@ -1,5 +1,6 @@
 <script>
   import { goto } from '$app/navigation';
+  import { base } from '$app/paths';
   import { adminValidationQueue } from '$lib/data/mockData.js';
   import Navbar from '$lib/components/Navbar.svelte';
   import Footer from '$lib/components/Footer.svelte';
@@ -63,9 +64,9 @@
 <div class="reg-page">
   <Navbar
     cartCount={0}
-    onOpenCart={() => goto('/checkout')}
-    onOpenLogin={() => goto('/login')}
-    onNavigateSection={() => goto('/')}
+    onOpenCart={() => goto(`${base}/checkout`)}
+    onOpenLogin={() => goto(`${base}/login`)}
+    onNavigateSection={() => goto(`${base}/`)}
   />
 
   <main class="page-container">
@@ -152,7 +153,7 @@
               <button
                 type="button"
                 class="btn-cancel"
-                onclick={() => goto('/')}
+                onclick={() => goto(`${base}/`)}
               >
                 Batal
               </button>
@@ -323,14 +324,14 @@
             <button
               type="button"
               class="btn-to-dash font-mono"
-              onclick={() => goto('/dashboard')}
+              onclick={() => goto(`${base}/dashboard`)}
             >
               Buka Dashboard FEB-X
             </button>
             <button
               type="button"
               class="btn-to-home font-mono"
-              onclick={() => goto('/')}
+              onclick={() => goto(`${base}/`)}
             >
               Kembali ke Marketplace
             </button>

@@ -8,6 +8,7 @@
   import SSOLoginModal from '$lib/components/SSOLoginModal.svelte';
   import Footer from '$lib/components/Footer.svelte';
   import { currentUser, loginUser, logoutUser } from '$lib/stores/auth.js';
+  import { base } from '$app/paths';
 
   // Svelte 5 Runes State
   let selectedCategory = $state('all');
@@ -119,7 +120,7 @@
         <span>SESI AKTIF: {activeRole.name.toUpperCase()} ({activeRole.badge})</span>
       </div>
       <div class="role-bar-actions">
-        <a href="/dashboard" class="btn-goto-dash font-mono">
+        <a href="{base}/dashboard" class="btn-goto-dash font-mono">
           <span class="material-symbols-outlined text-xs">dashboard</span>
           <span>Buka Dashboard</span>
         </a>
