@@ -1,97 +1,91 @@
 :root {
-  /* FEB-X Core Color Tokens */
-  --color-primary: #000666;
-  --color-primary-hover: #000b99;
-  --color-primary-container: #1a237e;
+  /* FEB-X Neo-Nusantara & Academic Color Tokens */
+  --color-primary: #0b1938;                 /* Deep Royal Indigo */
+  --color-primary-hover: #122857;
+  --color-primary-container: #102450;
+  --color-primary-accent: #1d4ed8;          /* Radiant Cobalt */
   --color-on-primary: #ffffff;
-  --color-on-primary-container: #8690ee;
-  --color-primary-fixed: #e0e0ff;
-  --color-primary-fixed-dim: #bdc2ff;
-  --color-on-primary-fixed: #000767;
-  --color-on-primary-fixed-variant: #343d96;
+  --color-on-primary-container: #93c5fd;
+  --color-primary-fixed: #e2e8f8;
+  --color-primary-fixed-dim: #c7d2fe;
+  --color-on-primary-fixed: #081229;
+  --color-on-primary-fixed-variant: #1e3a8a;
 
-  --color-secondary: #785900;
-  --color-secondary-container: #fdc003;
-  --color-secondary-hover: #e5ad00;
+  /* Imperial Warm Gold Tokens */
+  --color-secondary: #b45309;               /* Deep Heritage Gold */
+  --color-secondary-container: #f59e0b;     /* Radiant Amber Gold */
+  --color-secondary-hover: #d97706;
   --color-on-secondary: #ffffff;
-  --color-on-secondary-container: #6c5000;
-  --color-secondary-fixed: #ffdf9e;
-  --color-secondary-fixed-dim: #fabd00;
-  --color-on-secondary-fixed: #261a00;
-  --color-on-secondary-fixed-variant: #5b4300;
+  --color-on-secondary-container: #451a03;
+  --color-secondary-fixed: #fef3c7;         /* Soft Champagne Gold */
+  --color-secondary-fixed-dim: #fde68a;
+  --color-on-secondary-fixed: #78350f;
+  --color-on-secondary-fixed-variant: #92400e;
 
-  --color-tertiary: #000f5b;
-  --color-tertiary-container: #072189;
+  /* Tertiary Indigo & Emerald */
+  --color-tertiary: #065f46;                /* Academic Emerald */
+  --color-tertiary-container: #047857;
   --color-on-tertiary: #ffffff;
-  --color-on-tertiary-container: #7e90f8;
-  --color-tertiary-fixed: #dee0ff;
+  --color-on-tertiary-container: #a7f3d0;
+  --color-tertiary-fixed: #d1fae5;
 
-  --color-background: #f6f8fd;
-  --color-on-background: #1a1c1c;
+  /* Neutral Surface Palette */
+  --color-background: #f8fafc;              /* Slate-tinted crisp off-white */
+  --color-on-background: #0f172a;           /* Deep Slate Slate-900 */
 
-  /* Rich Aurora Mesh, Topographic Wave Motif, and Tactile Noise Grain */
-  --bg-pattern: 
-    /* Layer 1: Tactile Micro-Noise Paper Grain Texture */
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.035'/%3E%3C/svg%3E"),
-    /* Layer 2: Topographic Flowing Curves & Plus Matrix Motif */
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160' viewBox='0 0 160 160'%3E%3Cpath d='M-20 40 C 20 80, 60 0, 100 40 S 160 80, 180 40' fill='none' stroke='%234338ca' stroke-width='1.2' stroke-opacity='0.12'/%3E%3Cpath d='M-20 80 C 30 120, 70 40, 110 80 S 170 120, 190 80' fill='none' stroke='%239333ea' stroke-width='1' stroke-opacity='0.10'/%3E%3Cpath d='M-20 120 C 40 160, 80 80, 120 120 S 180 160, 200 120' fill='none' stroke='%230ea5e9' stroke-width='0.9' stroke-opacity='0.10'/%3E%3Cpath d='M-20 160 C 50 200, 90 120, 130 160 S 190 200, 210 160' fill='none' stroke='%23f59e0b' stroke-width='0.9' stroke-opacity='0.09'/%3E%3Cpath d='M78 80 H82 M80 78 V82' stroke='%234338ca' stroke-width='1.5' stroke-opacity='0.22'/%3E%3Cpath d='M158 80 H162 M160 78 V82' stroke='%234338ca' stroke-width='1.5' stroke-opacity='0.22'/%3E%3Cpath d='M78 160 H82 M80 158 V162' stroke='%234338ca' stroke-width='1.5' stroke-opacity='0.22'/%3E%3Cpath d='M158 160 H162 M160 158 V162' stroke='%234338ca' stroke-width='1.5' stroke-opacity='0.22'/%3E%3C/svg%3E"),
-    /* Layer 3: Vibrant Royal Indigo Glow */
-    radial-gradient(ellipse 65% 55% at 5% 0%, rgba(67, 56, 202, 0.28), transparent 65%),
-    /* Layer 4: Radiant Sunset Tangerine Glow */
-    radial-gradient(ellipse 55% 50% at 95% 5%, rgba(249, 115, 22, 0.25), transparent 60%),
-    /* Layer 5: Ocean Cyan & Turquoise Glow */
-    radial-gradient(ellipse 50% 50% at 0% 52%, rgba(6, 182, 212, 0.22), transparent 55%),
-    /* Layer 6: Vivid Neon Fuchsia / Violet Glow */
-    radial-gradient(ellipse 60% 50% at 100% 55%, rgba(217, 70, 239, 0.24), transparent 55%),
-    /* Layer 7: Warm Golden Citrus Glow */
-    radial-gradient(ellipse 70% 45% at 50% 100%, rgba(234, 179, 8, 0.22), transparent 60%);
-  --bg-pattern-size: 200px 200px, 160px 160px, 100% 100%, 100% 100%, 100% 100%, 100% 100%, 100% 100%;
-
-  --color-surface: #f9f9f9;
+  --color-surface: #f8fafc;
   --color-surface-bright: #ffffff;
-  --color-surface-dim: #dadada;
+  --color-surface-dim: #e2e8f0;
   --color-surface-container-lowest: #ffffff;
-  --color-surface-container-low: #f3f3f3;
-  --color-surface-container: #eeeeee;
-  --color-surface-container-high: #e8e8e8;
-  --color-surface-container-highest: #e2e2e2;
+  --color-surface-container-low: #f1f5f9;
+  --color-surface-container: #e2e8f0;
+  --color-surface-container-high: #cbd5e1;
+  --color-surface-container-highest: #94a3b8;
 
-  --color-on-surface: #1a1c1c;
-  --color-on-surface-variant: #454652;
-  --color-inverse-surface: #2f3131;
-  --color-inverse-on-surface: #f1f1f1;
+  --color-on-surface: #0f172a;
+  --color-on-surface-variant: #475569;
+  --color-inverse-surface: #0f172a;
+  --color-inverse-on-surface: #f8fafc;
 
-  --color-outline: #767683;
-  --color-outline-variant: #e2e2e2;
-  --color-outline-focus: #000666;
+  --color-outline: #94a3b8;
+  --color-outline-variant: #e2e8f0;
+  --color-outline-focus: #0b1938;
 
-  --color-error: #ba1a1a;
-  --color-error-container: #ffdad6;
+  --color-error: #dc2626;
+  --color-error-container: #fee2e2;
   --color-on-error: #ffffff;
-  --color-on-error-container: #93000a;
+  --color-on-error-container: #7f1d1d;
 
-  --color-success: #137333;
-  --color-success-container: #e6f4ea;
+  --color-success: #059669;
+  --color-success-container: #d1fae5;
 
   /* Typography */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif;
   --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
+  /* Neo-Nusantara Geometric SVG Patterns */
+  --pattern-kawung-light: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%230b1938' stroke-width='1'%3E%3Ccircle cx='30' cy='30' r='18' stroke-opacity='0.04'/%3E%3Ccircle cx='0' cy='0' r='18' stroke-opacity='0.04'/%3E%3Ccircle cx='60' cy='0' r='18' stroke-opacity='0.04'/%3E%3Ccircle cx='0' cy='60' r='18' stroke-opacity='0.04'/%3E%3Ccircle cx='60' cy='60' r='18' stroke-opacity='0.04'/%3E%3Cpath d='M30 12 L48 30 L30 48 L12 30 Z' stroke-opacity='0.03'/%3E%3Ccircle cx='30' cy='30' r='2' fill='%23b45309' fill-opacity='0.07' stroke='none'/%3E%3Ccircle cx='0' cy='0' r='2' fill='%23b45309' fill-opacity='0.07' stroke='none'/%3E%3Ccircle cx='60' cy='0' r='2' fill='%23b45309' fill-opacity='0.07' stroke='none'/%3E%3Ccircle cx='0' cy='60' r='2' fill='%23b45309' fill-opacity='0.07' stroke='none'/%3E%3Ccircle cx='60' cy='60' r='2' fill='%23b45309' fill-opacity='0.07' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+  
+  --pattern-kawung-dark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1'%3E%3Ccircle cx='30' cy='30' r='18' stroke-opacity='0.08'/%3E%3Ccircle cx='0' cy='0' r='18' stroke-opacity='0.08'/%3E%3Ccircle cx='60' cy='0' r='18' stroke-opacity='0.08'/%3E%3Ccircle cx='0' cy='60' r='18' stroke-opacity='0.08'/%3E%3Ccircle cx='60' cy='60' r='18' stroke-opacity='0.08'/%3E%3Cpath d='M30 12 L48 30 L30 48 L12 30 Z' stroke-opacity='0.06'/%3E%3Ccircle cx='30' cy='30' r='2.5' fill='%23f59e0b' fill-opacity='0.25' stroke='none'/%3E%3Ccircle cx='0' cy='0' r='2.5' fill='%23f59e0b' fill-opacity='0.25' stroke='none'/%3E%3Ccircle cx='60' cy='0' r='2.5' fill='%23f59e0b' fill-opacity='0.25' stroke='none'/%3E%3Ccircle cx='0' cy='60' r='2.5' fill='%23f59e0b' fill-opacity='0.25' stroke='none'/%3E%3Ccircle cx='60' cy='60' r='2.5' fill='%23f59e0b' fill-opacity='0.25' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+
+  --pattern-songket-gold: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='36' viewBox='0 0 36 36'%3E%3Cg fill='none' stroke='%23d97706' stroke-width='0.8' stroke-opacity='0.2'%3E%3Cpolygon points='18,2 34,18 18,34 2,18'/%3E%3Cpolygon points='18,8 28,18 18,28 8,18'/%3E%3Ccircle cx='18' cy='18' r='2' fill='%23f59e0b' fill-opacity='0.3' stroke='none'/%3E%3C/g%3E%3C/svg%3E");
+
   /* Elevation */
-  --shadow-ambient: 0 4px 16px rgba(0, 6, 102, 0.04);
-  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
-  --shadow-card: 0 4px 12px rgba(0, 6, 102, 0.05);
-  --shadow-card-hover: 0 12px 28px rgba(0, 6, 102, 0.09);
-  --shadow-drawer: -4px 0 24px rgba(0, 6, 102, 0.12);
-  --shadow-modal: 0 20px 48px rgba(0, 6, 102, 0.16);
+  --shadow-ambient: 0 4px 20px rgba(11, 25, 56, 0.05);
+  --shadow-subtle: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-card: 0 4px 16px rgba(11, 25, 56, 0.06);
+  --shadow-card-hover: 0 16px 32px rgba(11, 25, 56, 0.12), 0 2px 8px rgba(180, 83, 9, 0.08);
+  --shadow-drawer: -4px 0 24px rgba(11, 25, 56, 0.15);
+  --shadow-modal: 0 20px 48px rgba(11, 25, 56, 0.2);
 
   /* Radius */
   --radius-xs: 0.125rem;
   --radius-sm: 0.25rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --radius-2xl: 1rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
   --radius-full: 9999px;
 
   /* Layout */
@@ -123,19 +117,11 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--color-background);
+  background-image: var(--pattern-kawung-light);
+  background-repeat: repeat;
+  background-size: 60px 60px;
+  background-attachment: fixed;
   color: var(--color-on-background);
-  position: relative;
-}
-
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
-  background-image: var(--bg-pattern);
-  background-size: var(--bg-pattern-size);
-  background-repeat: repeat, repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
 }
 
 ::selection {
@@ -206,3 +192,34 @@ body::before {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--color-outline);
 }
+
+/* Neo-Nusantara Utilities */
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.pattern-nusantara-dark {
+  background-color: var(--color-primary);
+  background-image: var(--pattern-kawung-dark);
+  background-repeat: repeat;
+  background-size: 60px 60px;
+}
+
+.pattern-nusantara-gold {
+  background-image: var(--pattern-songket-gold);
+  background-repeat: repeat;
+  background-size: 36px 36px;
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #f59e0b 0%, #fbbf24 50%, #d97706 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.indigo-gradient-text {
+  background: linear-gradient(135deg, #0b1938 0%, #1e3a8a 60%, #2563eb 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+

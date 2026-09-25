@@ -73,10 +73,12 @@
     <div class="catalog-header">
       <div class="header-text-col">
         <div class="eyebrow-container">
-          <span class="eyebrow-chip">MARKETPLACE FEB-X</span>
+          <span class="eyebrow-chip font-mono">
+            <span class="motif-diamond">◆</span> MARKETPLACE FEB-X <span class="motif-diamond">◆</span>
+          </span>
           <span class="stock-status font-mono">{filteredProducts.length} Produk &amp; Jasa Terverifikasi</span>
         </div>
-        <h2 class="catalog-title">Katalog Produk &amp; Inovasi Mahasiswa</h2>
+        <h2 class="catalog-title font-heading">Katalog Produk &amp; Inovasi Mahasiswa</h2>
         <p class="catalog-desc">
           Seluruh produk dikurasi oleh dekanat dan didampingi langsung oleh dosen pembimbing kewirausahaan.
         </p>
@@ -308,27 +310,34 @@
   }
 
   .eyebrow-chip {
-    font-family: var(--font-mono);
     font-size: 0.6875rem;
     font-weight: 700;
     letter-spacing: 0.1em;
     color: var(--color-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .motif-diamond {
+    color: var(--color-secondary-container);
+    font-size: 0.625rem;
   }
 
   .stock-status {
     font-size: 0.75rem;
     color: var(--color-on-surface-variant);
-    background-color: var(--color-surface-container-high);
-    padding: 0.15rem 0.55rem;
-    border-radius: var(--radius-xs);
+    background-color: var(--color-surface-container-low);
+    padding: 0.15rem 0.6rem;
+    border-radius: var(--radius-full);
     border: 1px solid var(--color-outline-variant);
   }
 
   .catalog-title {
-    font-size: 1.85rem;
+    font-size: 2rem;
     font-weight: 800;
     color: var(--color-primary);
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
     margin-bottom: 0.35rem;
   }
 
@@ -446,35 +455,45 @@
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.55rem 1.1rem;
-    background-color: var(--color-surface-container-lowest);
+    padding: 0.6rem 1.15rem;
+    background-color: var(--color-surface-bright);
     border: 1px solid var(--color-outline-variant);
     border-radius: var(--radius-full);
     color: var(--color-on-surface);
     font-family: var(--font-sans);
     font-size: 0.8125rem;
-    font-weight: 500;
+    font-weight: 600;
     cursor: pointer;
     flex-shrink: 0;
-    transition: all 0.15s ease;
-    box-shadow: var(--shadow-subtle);
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 1px 3px rgba(11, 25, 56, 0.04);
   }
 
   .cat-pill:hover {
-    border-color: var(--color-primary);
+    border-color: var(--color-secondary-container);
     background-color: var(--color-surface-container-low);
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(11, 25, 56, 0.08);
   }
 
   .cat-pill.active {
-    background-color: var(--color-primary);
-    color: var(--color-on-primary);
-    border-color: var(--color-primary);
-    box-shadow: 0 4px 12px rgba(0, 6, 102, 0.2);
+    background-color: #0b1938;
+    background-image: var(--pattern-songket-gold);
+    background-size: 24px 24px;
+    background-repeat: repeat;
+    color: #ffffff;
+    border-color: rgba(245, 158, 11, 0.5);
+    box-shadow: 0 4px 16px rgba(11, 25, 56, 0.2);
   }
 
   .cat-icon {
-    font-size: 16px;
+    font-size: 17px;
+    color: var(--color-outline);
+    transition: color 0.15s ease;
+  }
+
+  .cat-pill:hover .cat-icon {
+    color: var(--color-secondary-container);
   }
 
   .cat-pill.active .cat-icon {
@@ -483,15 +502,17 @@
 
   .cat-count {
     font-size: 0.6875rem;
-    opacity: 0.8;
-    background: rgba(0, 0, 0, 0.06);
-    padding: 0.1rem 0.4rem;
+    font-weight: 700;
+    background: rgba(0, 0, 0, 0.05);
+    color: var(--color-on-surface-variant);
+    padding: 0.12rem 0.45rem;
     border-radius: var(--radius-full);
   }
 
   .cat-pill.active .cat-count {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
+    background: rgba(245, 158, 11, 0.25);
+    color: var(--color-secondary-fixed);
+    border: 1px solid rgba(245, 158, 11, 0.35);
   }
 
   /* Filter Status Banner */
@@ -568,23 +589,24 @@
 
   /* Product Card */
   .product-card {
-    background-color: var(--color-surface-container-lowest);
+    background-color: var(--color-surface-bright);
     border: 1px solid var(--color-outline-variant);
-    border-radius: var(--radius-lg);
+    border-radius: var(--radius-xl);
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    box-shadow: var(--shadow-ambient);
-    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    box-shadow: 0 4px 16px rgba(11, 25, 56, 0.05);
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease;
     cursor: pointer;
     text-align: left;
     height: 100%;
+    position: relative;
   }
 
   .product-card:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-card-hover);
-    border-color: var(--color-primary-fixed-dim);
+    transform: translateY(-4px);
+    box-shadow: 0 16px 36px rgba(11, 25, 56, 0.1), 0 0 0 1px rgba(245, 158, 11, 0.35);
+    border-color: rgba(245, 158, 11, 0.4);
   }
 
   .card-image-wrap {
@@ -599,11 +621,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.35s ease;
+    transition: transform 0.4s ease;
   }
 
   .product-card:hover .card-img {
-    transform: scale(1.04);
+    transform: scale(1.05);
   }
 
   .card-badges {
@@ -619,32 +641,36 @@
     font-size: 0.6875rem;
     font-weight: 700;
     letter-spacing: 0.05em;
-    padding: 0.2rem 0.5rem;
+    padding: 0.2rem 0.55rem;
     border-radius: var(--radius-xs);
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   }
 
   .badge-new {
-    background-color: var(--color-primary);
-    color: var(--color-on-primary);
+    background: linear-gradient(135deg, #0b1938 0%, #1e3a8a 100%);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
 
   .badge-popular {
-    background-color: var(--color-secondary-container);
-    color: var(--color-on-secondary-container);
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #0b1938;
+    font-weight: 800;
   }
 
   .category-chip {
     position: absolute;
     bottom: 8px;
     right: 10px;
-    background-color: rgba(255, 255, 255, 0.92);
-    backdrop-filter: blur(4px);
+    background-color: rgba(11, 25, 56, 0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
     font-size: 0.6875rem;
     font-weight: 600;
-    color: var(--color-primary);
-    padding: 0.15rem 0.5rem;
+    color: #ffffff;
+    padding: 0.2rem 0.55rem;
     border-radius: var(--radius-xs);
+    border: 1px solid rgba(245, 158, 11, 0.3);
   }
 
   /* Card Body */
@@ -674,12 +700,13 @@
   }
 
   .verified-icon {
-    font-size: 14px;
-    color: var(--color-primary);
+    font-size: 15px;
+    color: var(--color-secondary-container);
     vertical-align: middle;
   }
 
   .product-name {
+    font-family: var(--font-heading);
     font-size: 1.05rem;
     font-weight: 700;
     line-height: 1.35;
@@ -703,7 +730,7 @@
 
   .mentor-icon {
     font-size: 14px;
-    color: var(--color-primary);
+    color: var(--color-secondary);
   }
 
   .rating-row {
@@ -749,28 +776,30 @@
   }
 
   .price-val {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     font-weight: 800;
     color: var(--color-primary);
     white-space: nowrap;
+    letter-spacing: -0.02em;
   }
 
   .price-suffix {
     font-size: 0.6875rem;
-    color: var(--color-outline);
+    color: var(--color-secondary);
+    font-weight: 600;
   }
 
   .card-actions {
     display: flex;
     align-items: center;
-    gap: 0.4rem;
+    gap: 0.45rem;
     flex-shrink: 0;
   }
 
   .btn-detail-link {
-    width: 32px;
-    height: 32px;
-    border-radius: var(--radius-sm);
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-md);
     background-color: var(--color-surface-container-low);
     border: 1px solid var(--color-outline-variant);
     color: var(--color-primary);
@@ -784,29 +813,32 @@
   .btn-detail-link:hover {
     background-color: var(--color-surface-container-high);
     border-color: var(--color-primary);
+    color: var(--color-primary-accent);
   }
 
   .btn-cart {
-    width: 34px;
-    height: 34px;
-    border-radius: var(--radius-sm);
-    background-color: var(--color-primary);
-    color: var(--color-on-primary);
-    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, #0b1938 0%, #102450 100%);
+    color: #ffffff;
+    border: 1px solid rgba(245, 158, 11, 0.25);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: all 0.15s ease;
+    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .btn-cart:hover {
-    background-color: var(--color-primary-container);
-    transform: scale(1.05);
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    color: #0b1938;
+    transform: scale(1.08);
+    box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
   }
 
   .btn-cart.added {
-    background-color: var(--color-success);
+    background: #059669;
     color: white;
   }
 

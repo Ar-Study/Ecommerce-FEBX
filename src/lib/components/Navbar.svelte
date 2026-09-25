@@ -19,6 +19,7 @@
 </script>
 
 <nav class="navbar">
+  <div class="top-nusantara-ribbon"></div>
   <div class="container nav-content">
     <!-- Brand / Logo -->
     <div class="nav-left">
@@ -194,14 +195,32 @@
 </nav>
 
 <style>
+  .top-nusantara-ribbon {
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, #0b1938 0%, #b45309 25%, #f59e0b 50%, #b45309 75%, #0b1938 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .top-nusantara-ribbon::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--pattern-songket-gold);
+    background-size: 24px 24px;
+    opacity: 0.6;
+  }
+
   .navbar {
     position: sticky;
     top: 0;
     z-index: 50;
-    background-color: var(--color-surface-bright);
-    border-bottom: 1px solid var(--color-outline-variant);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    background-color: rgba(255, 255, 255, 0.94);
+    border-bottom: 1px solid rgba(226, 232, 240, 0.85);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 1px 3px rgba(11, 25, 56, 0.03);
     transition: all 0.2s ease;
   }
 
@@ -222,24 +241,33 @@
   .brand-link {
     display: flex;
     align-items: center;
-    gap: 0.625rem;
+    gap: 0.75rem;
     text-decoration: none;
     color: var(--color-primary);
+    transition: transform 0.15s ease;
+  }
+
+  .brand-link:hover {
+    transform: translateY(-1px);
   }
 
   .brand-icon {
-    font-size: 30px;
+    font-size: 32px;
     color: var(--color-primary);
+    background: linear-gradient(135deg, var(--color-primary) 30%, var(--color-secondary-container) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 
   .brand-text {
     display: flex;
     flex-direction: column;
-    line-height: 1.1;
+    line-height: 1.05;
   }
 
   .brand-title {
-    font-size: 1.35rem;
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
     font-weight: 800;
     letter-spacing: -0.03em;
     color: var(--color-primary);
@@ -247,10 +275,13 @@
 
   .brand-badge {
     font-family: var(--font-mono);
-    font-size: 9px;
-    letter-spacing: 0.12em;
+    font-size: 8.5px;
+    letter-spacing: 0.14em;
     font-weight: 700;
     color: var(--color-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
   }
 
   .nav-links {

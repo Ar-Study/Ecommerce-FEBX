@@ -349,7 +349,7 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: transparent;
+    background-color: var(--color-background);
   }
 
   .page-container {

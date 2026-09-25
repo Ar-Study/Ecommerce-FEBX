@@ -3,19 +3,20 @@
 </script>
 
 <footer class="site-footer">
+  <div class="footer-nusantara-ribbon"></div>
   <div class="container footer-content">
     <div class="footer-top">
       <!-- Brand column -->
       <div class="footer-brand-col">
         <div class="footer-logo">
           <span class="material-symbols-outlined icon-fill logo-icon">account_balance</span>
-          <span class="logo-title">FEB-X</span>
+          <span class="logo-title font-heading">FEB-X</span>
         </div>
         <p class="brand-sub">
-          FEB Business Ecosystem eXperience — Platform integrasi marketplace kewirausahaan mahasiswa, inkubator dekanat, dan laboratorium fintech akademik.
+          FEB Business Ecosystem eXperience — Platform integrasi marketplace kewirausahaan mahasiswa, inkubator dekanat, dan laboratorium fintech akademik terpercaya.
         </p>
         <div class="accreditation-tag font-mono">
-          <span class="material-symbols-outlined text-xs">verified</span>
+          <span class="material-symbols-outlined text-xs gold-icon">workspace_premium</span>
           <span>Terakreditasi Unggul LAMEMBA &amp; AACSB Member</span>
         </div>
       </div>
@@ -61,10 +62,10 @@
       </p>
       <div class="bottom-badges">
         <span>KAMPUS MERDEKA</span>
-        <span>•</span>
+        <span class="badge-dot">•</span>
         <span>FINTECH ECOSYSTEM</span>
-        <span>•</span>
-        <span>ISO 27001 COMPLIANT</span>
+        <span class="badge-dot">•</span>
+        <span>DEKANAT VERIFIED</span>
       </div>
     </div>
   </div>
@@ -72,10 +73,35 @@
 
 <style>
   .site-footer {
-    background-color: var(--color-surface-container-highest);
-    border-top: 1px solid var(--color-outline-variant);
-    padding: 3.5rem 0 2rem;
-    margin-top: auto;
+    background-color: #0b1938;
+    background-image: 
+      radial-gradient(circle at 15% 15%, rgba(245, 158, 11, 0.08) 0%, transparent 40%),
+      var(--pattern-kawung-dark);
+    background-repeat: no-repeat, repeat;
+    background-size: auto, 60px 60px;
+    color: #ffffff;
+    padding: 0 0 2rem;
+    margin-top: 4rem;
+    position: relative;
+    border-top: 1px solid rgba(245, 158, 11, 0.25);
+  }
+
+  .footer-nusantara-ribbon {
+    height: 3px;
+    width: 100%;
+    background: linear-gradient(90deg, #0b1938 0%, #b45309 30%, #f59e0b 50%, #b45309 70%, #0b1938 100%);
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 3.5rem;
+  }
+
+  .footer-nusantara-ribbon::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: var(--pattern-songket-gold);
+    background-size: 24px 24px;
+    opacity: 0.7;
   }
 
   .footer-top {
@@ -94,47 +120,54 @@
   .footer-logo {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    margin-bottom: 0.75rem;
+    gap: 0.6rem;
+    margin-bottom: 0.85rem;
   }
 
   .logo-icon {
-    font-size: 26px;
-    color: var(--color-primary);
+    font-size: 28px;
+    color: var(--color-secondary-container);
+    filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.3));
   }
 
   .logo-title {
-    font-size: 1.35rem;
+    font-size: 1.45rem;
     font-weight: 800;
-    color: var(--color-primary);
+    color: #ffffff;
     letter-spacing: -0.02em;
   }
 
   .brand-sub {
     font-size: 0.8125rem;
-    line-height: 1.6;
-    color: var(--color-on-surface-variant);
-    margin-bottom: 1rem;
+    line-height: 1.65;
+    color: rgba(241, 245, 249, 0.75);
+    margin-bottom: 1.25rem;
     max-width: 380px;
   }
 
   .accreditation-tag {
     display: inline-flex;
     align-items: center;
-    gap: 0.35rem;
-    font-size: 0.6875rem;
+    gap: 0.45rem;
+    font-size: 0.7rem;
     font-weight: 600;
-    color: var(--color-primary);
-    background-color: var(--color-primary-fixed);
-    padding: 0.3rem 0.6rem;
-    border-radius: var(--radius-xs);
+    color: var(--color-secondary-fixed);
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    padding: 0.35rem 0.75rem;
+    border-radius: var(--radius-full);
+    backdrop-filter: blur(4px);
+  }
+
+  .gold-icon {
+    color: var(--color-secondary-container);
   }
 
   .links-title {
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.08em;
-    color: var(--color-primary);
+    letter-spacing: 0.1em;
+    color: var(--color-secondary-container);
     margin-bottom: 1rem;
   }
 
@@ -146,15 +179,16 @@
   }
 
   .links-list a {
-    color: var(--color-on-surface-variant);
+    color: rgba(241, 245, 249, 0.75);
     text-decoration: none;
     font-size: 0.8125rem;
-    transition: color 0.15s ease;
+    transition: all 0.15s ease;
   }
 
   .links-list a:hover {
-    color: var(--color-primary);
-    text-decoration: underline;
+    color: var(--color-secondary-fixed);
+    transform: translateX(2px);
+    display: inline-block;
   }
 
   .footer-bottom {
@@ -163,22 +197,26 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 1rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--color-outline-variant);
+    padding-top: 1.75rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
     font-size: 0.6875rem;
-    color: var(--color-outline);
+    color: rgba(241, 245, 249, 0.6);
   }
 
   .bottom-badges {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: var(--color-secondary);
+    color: var(--color-secondary-fixed);
+  }
+
+  .badge-dot {
+    color: rgba(245, 158, 11, 0.6);
   }
 
   @media (max-width: 640px) {
     .site-footer {
-      padding: 2.5rem 0 1.5rem;
+      padding: 0 0 1.5rem;
     }
     .footer-top {
       grid-template-columns: 1fr;
